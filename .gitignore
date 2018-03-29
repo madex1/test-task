@@ -22,6 +22,8 @@ desktop.ini
 !/public_html/classes/components/**/*custom*.php
 !/public_html/classes/components/**/lang.*.php
 !/public_html/classes/components/**/ext
+/public_html/classes/components/**/ext/*
+!/public_html/classes/components/**/ext/*.php
 !/public_html/classes/system
 /public_html/classes/system/*
 !/public_html/classes/system/subsystems
