@@ -1,0 +1,10 @@
+<script>
+var errors = [
+<?
+$errors = $this->macros('system', 'listErrorMessages');
+foreach ($errors['items'] as $error) {
+	echo "\"$error\"";
+}
+?>
+];
+</script>
