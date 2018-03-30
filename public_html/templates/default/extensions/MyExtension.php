@@ -1,5 +1,5 @@
 <?php
-class MdxPhpExtension extends ViewPhpExtension {
+class MyExtension extends ViewPhpExtension {
 {
 
     public function getObjects($ids, $sortby=false) {
