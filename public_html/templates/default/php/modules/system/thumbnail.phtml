@@ -8,18 +8,16 @@ cropside
 className
 alt
 */
-
 if($variables['img']):?>
 <?	$thumb = $this->macros('system','makeThumbnailFull',array(
-			".".$img,
+			$variables['img'],
 			$variables['width'],
 			$variables['height'],
 			null,
 			0,
 			$variables['crop'],
-			($variables['cropside'])?$variables['cropside']:5)
+			(isset($variables['cropside']))?$variables['cropside']:5)
 		);
-
 ?>
 <img src="<?=$thumb['src'];?>" alt="<?=$variables['alt'];?>" width="<?=$variables['width'];?>" height="<?=$variables['height'];?>" class="<?=$variables['className'];?>"/>
 <?endif;?>
