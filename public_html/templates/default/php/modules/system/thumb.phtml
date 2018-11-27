@@ -1,0 +1,22 @@
+<?
+/*
+img
+width
+height
+crop
+cropside
+className
+alt
+*/
+if($variables['img']):?>
+<?	$thumb = $this->macros('system','makeThumbnail',array(
+			$variables['img'],
+			$variables['width'],
+			$variables['height'],
+			null,
+			0,
+			$variables['flags'])
+		);
+?>
+<img src="<?=$thumb['src'];?>" alt="<?=$variables['alt'];?>" width="<?=$variables['width'];?>" height="<?=$variables['height'];?>" class="<?=$variables['className'];?>"/>
+<?endif;?>
