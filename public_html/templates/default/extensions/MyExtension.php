@@ -34,7 +34,7 @@ class MyExtension extends ViewPhpExtension
     }
 
     public function getProperty($object, $prop_name) {
-        foreach($object['extended'] as $prop) {
+        foreach($object['extended']['properties'] as $prop) {
             if($prop->getName() == $prop_name) {
                 return $prop->getValue();
             }
@@ -42,7 +42,7 @@ class MyExtension extends ViewPhpExtension
     }
 
     public function getPropertyObj($object, $prop_name) {
-        foreach($object['extended']['properties']['+property'] as $prop) {
+        foreach($object['extended']['properties'] as $prop) {
             if($prop->getName() == $prop_name) {
                 return $prop;
             }
@@ -130,6 +130,14 @@ class MyExtension extends ViewPhpExtension
         $user = umiObjectsCollection::getInstance()->getObject($user_id);
 
         return $user->groups;
+    }
+
+    public function drawClasses($classes) {
+        if(sizeof($classes)) {
+            return 'class="'.implode(' ', $classes).'"';
+        } else {
+            return '';
+        }
     }
 
 }
