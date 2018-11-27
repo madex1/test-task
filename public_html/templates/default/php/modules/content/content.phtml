@@ -1,0 +1,10 @@
+<?php 
+$page = $variables['page'];
+
+if($page->getIsDefault()) {
+	echo $this->render($variables, 'modules/content/main');
+}else{
+	echo $this->render($variables, 'modules/content/content-'.$page->getObjectTypeId());
+}
+
+?>

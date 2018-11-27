@@ -1,0 +1,12 @@
+<?php 
+$news = $variables['page'];
+
+echo $this->render($variables, 'blocks/pagetitle');
+
+if(file_exists('./templates/default/php/modules/news/rubric-'.$news->getObjectTypeId().'.phtml')) {
+	echo $this->render($variables, 'modules/news/rubric-'.$news->getObjectTypeId());
+} else {
+	echo $this->render($variables, 'modules/news/rubric-main');
+}
+
+?>
