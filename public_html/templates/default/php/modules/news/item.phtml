@@ -1,0 +1,10 @@
+<?php 
+$news = $variables['page'];
+
+if(file_exists('./templates/default/php/modules/news/item-'.$news->getObjectTypeId().'.phtml')) {
+	echo $this->render($variables, 'modules/news/item-'.$news->getObjectTypeId());
+} else {
+	echo $this->render($variables, 'modules/news/item-main');
+}
+
+?>
