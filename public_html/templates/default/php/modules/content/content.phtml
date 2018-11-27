@@ -1,8 +1,6 @@
 <?php 
 $page = $variables['page'];
 
-echo $this->render($variables, 'blocks/pagetitle');
-
 if($page->getIsDefault()) {
 	echo $this->render($variables, 'modules/content/main');
 }elseif(file_exists('./templates/default/php/modules/content/content-'.$news->getObjectTypeId().'.phtml')) {{
