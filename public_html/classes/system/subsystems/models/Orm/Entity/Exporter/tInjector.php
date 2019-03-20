@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Exporter;use UmiCms\System\Orm\Entity\iExporter;trait tInjector {private $ved780287e302ec3b9fd3c5e78771919f;protected function getExporter() {return $this->exporter;}protected function setExporter(iExporter $ved780287e302ec3b9fd3c5e78771919f) {$this->exporter = $ved780287e302ec3b9fd3c5e78771919f;return $this;}}

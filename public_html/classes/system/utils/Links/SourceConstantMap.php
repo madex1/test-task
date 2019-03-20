@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Links;class SourceConstantMap extends \baseUmiCollectionConstantMap {const TABLE_NAME = 'cms3_links_sources';const EXCHANGE_RELATION_TABLE_NAME = 'cms3_import_links_sources';const LINK_ID_FIELD_NAME = 'link_id';const PLACE_FIELD_NAME = 'place';const TYPE_FIELD_NAME = 'type';}

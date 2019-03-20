@@ -1,0 +1,2 @@
+<?php
+ trait tUmiPagesInjector {private $vfcdb6cbba80d2404a6dab40e73ea6201;public function setPagesCollection(\iUmiHierarchy $vb3b32a2d422265cd25c3323ed0157f81) {$this->pagesCollection = $vb3b32a2d422265cd25c3323ed0157f81;return $this;}public function getPagesCollection() {if (!$this->pagesCollection instanceof \iUmiHierarchy) {throw new \RequiredPropertyHasNoValueException('You should inject \iUmiHierarchy first');}return $this->pagesCollection;}}

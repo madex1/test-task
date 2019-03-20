@@ -1,0 +1,2 @@
+<?php
+ trait tUmiLanguagesInjector {private $v93aa8ee706bab9357c91e245d24070e3;public function getLanguageCollection() {if (!$this->languagesCollection instanceof iLangsCollection) {throw new Exception('You should set iLangsCollection first');}return $this->languagesCollection;}public function setLanguageCollection(iLangsCollection $v93aa8ee706bab9357c91e245d24070e3) {$this->languagesCollection = $v93aa8ee706bab9357c91e245d24070e3;return $this;}}

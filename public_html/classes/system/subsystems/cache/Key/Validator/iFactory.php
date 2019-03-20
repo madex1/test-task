@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache\Key\Validator;use UmiCms\System\Cache\Key\iValidator;interface iFactory {public function __construct(\iConfiguration $vccd1066343c95877b75b79d47c36bebe);public function create($vb068931cc450442b63f5b3d276ea4297 = null);}

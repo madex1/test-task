@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Extension;use UmiCms\System\Registry\Part;class Registry extends Part implements iRegistry {const PATH_PREFIX = '//extensions';public function __construct(\iRegedit $vddecebdea58b5f264d27f1f7909bab74) {parent::__construct($vddecebdea58b5f264d27f1f7909bab74);parent::setPathPrefix(self::PATH_PREFIX);}public function append($vb068931cc450442b63f5b3d276ea4297) {return $this->set($vb068931cc450442b63f5b3d276ea4297, $vb068931cc450442b63f5b3d276ea4297);}public function setPathPrefix($v851f5ac9941d720844d143ed9cfcf60a) {return $this;}}

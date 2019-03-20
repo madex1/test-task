@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Stock\Balance;use UmiCms\System\Orm\Entity\iMapper as iAbstractMapper;interface iMapper extends iAbstractMapper {const OFFER_ID = 'offer_id';const STOCK_ID = 'stock_id';const VALUE = 'value';const OFFER = 'offer';const STOCK = 'stock';}

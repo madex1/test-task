@@ -1,0 +1,2 @@
+<?php
+ interface iGarbageCollector {public function run();public function setMaxIterationCount($v01a02ac01bd734f00a6e7c0f31d19375);public function getMaxIterationCount();public function getExecutedIterationsCount();}

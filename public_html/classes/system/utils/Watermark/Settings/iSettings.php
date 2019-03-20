@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Watermark\Settings;use UmiCms\Classes\System\Utils\Settings\iSettings as iMainSettings;interface iSettings extends iMainSettings {public function getImagePath();public function setImagePath($vd6fe1d0be6347b8ef2427fa629c04485);public function getAlpha();public function setAlpha($v2c1743a391305fbf367df8e4f069f9f9);public function getVerticalAlign();public function setVerticalAlign($vf792d1afb0399dce47533bead9d71a8a);public function getHorizontalAlign();public function setHorizontalAlign($vf792d1afb0399dce47533bead9d71a8a);}

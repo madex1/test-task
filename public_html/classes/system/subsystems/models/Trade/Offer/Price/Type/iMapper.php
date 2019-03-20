@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Type;use UmiCms\System\Orm\Entity\iMapper as iAbstractMapper;interface iMapper extends iAbstractMapper {const NAME = 'name';const TITLE = 'title';const IS_DEFAULT = 'is_default';}

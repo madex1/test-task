@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Importer;use UmiCms\System\Orm\Entity\iImporter;trait tInjector {private $v1bc49dba86c5074c5266c6d38c301a46;protected function getImporter() {return $this->importer;}protected function setImporter(iImporter $v1bc49dba86c5074c5266c6d38c301a46) {$this->importer = $v1bc49dba86c5074c5266c6d38c301a46;return $this;}}

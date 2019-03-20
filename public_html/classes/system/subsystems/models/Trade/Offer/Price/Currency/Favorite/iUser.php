@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Currency\Favorite;use UmiCms\System\Auth\iAuth;use \iUmiObjectsCollection as iObjectCollection;use UmiCms\System\Trade\Offer\Price\Currency\iFavorite as iAbstractFavorite;interface iUser extends iAbstractFavorite {const FIELD_NAME = 'preffered_currency';public function __construct(iAuth $vfa53b91ccc1b78668d5af58e1ed3a485, iObjectCollection $v69ae498121c2d8e63f20c7144a0246d7);}

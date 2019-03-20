@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Уровень вложенности индексации</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        #level {
+            width: 100px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .container {
+            text-align: center;
+        }
+        body {
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="level" id="level_label">Уровень вложенности:</label>
+                <input type="text" value="1" maxlength="10" class="form-control" placeholder="Уровень" id="level" >
+                <button type="submit" class="btn btn-default" id="apply">Применить</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('#level_label').text(window.parent.getLabel('js-indexing-level-nesting-deep'));
+            jQuery('#apply').text(window.parent.getLabel('js-indexing-apply'));
+
+            var levelInput = jQuery('#level');
+            levelInput.focus();
+
+            jQuery('#apply').click(function() {
+                var value = levelInput.val();
+                var level = parseInt(value);
+                var args;
+                var chosenItemId;
+                var oldCategoryId;
+                var returningData;
+                var mainWindow = window.parent;
+
+                if (level <= 0 || isNaN(level)) {
+                    levelInput.parent().addClass('has-error');
+                    levelInput.focus();
+                    return;
+                }
+
+                args = window.parent.AdminIndexing.Controller.getArgs(location.search);
+                chosenItemId = args['newCategory'];
+                oldCategoryId = args['oldCategory'];
+
+                if (chosenItemId <= 0) {
+                    return;
+                }
+
+                returningData = {
+                    oldCategory: oldCategoryId,
+                    newCategory: chosenItemId,
+                    level: level,
+                    success: true
+                };
+
+                mainWindow.$.closePopupLayer(mainWindow.AdminIndexing.Settings.popups.level.name, returningData);
+            });
+        })
+
+    </script>
+</body>
+</html>

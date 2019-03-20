@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Data\Object\Property;use UmiCms\System\Data\Object\Property\Value\Table\iSchema;interface iRepository {public function __construct(   \IConnection $v4717d53ebfdfea8477f780ec66151dcb,   iFactory $v9549dd6065d019211460c59a86dd6536,   \iUmiFieldsCollection $vc08b50415eb1a67928fe59c937252cde,   iSchema $vc9550d5fad73447fc24ba47f95d1c6b7  );public function getListByFieldId($v945100186b119048837b9859c2c46410, $vaa9f73eea60a006820d0f8768bc8a3fc = 100, $v7a86c157ee9713c34fbd7a1ee40f0c5a = 0, $v870b60148237c1452dfb337fdd19c314 = null);}

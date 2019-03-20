@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache\Key;interface iValidator {public function __construct(\iConfiguration $vccd1066343c95877b75b79d47c36bebe);public function isValid($v3c6e0b8a9c15224a8228b9a98ca1531d);}

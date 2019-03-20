@@ -1,0 +1,2 @@
+<?php
+ interface iMatches {public function __construct($v5b063e275d506f65ebf1b02d926f19a4 = 'sitemap.xml');public function setCurrentURI($v9305b73d359bd06734fee0b3638079e1);public function execute($vfa6b3c4a6238cc6e84e234abcfe10265 = true);}

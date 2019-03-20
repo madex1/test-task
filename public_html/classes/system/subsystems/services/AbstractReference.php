@@ -1,0 +1,2 @@
+<?php
+ abstract class AbstractReference {private $name;public function __construct($vb068931cc450442b63f5b3d276ea4297) {$this->name = $vb068931cc450442b63f5b3d276ea4297;}public function getName() {return $this->name;}}

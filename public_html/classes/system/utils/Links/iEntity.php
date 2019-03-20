@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Links;interface iEntity extends \iUmiCollectionItem {public function setAddress($v884d9804999fc47a3c2694e49ad2536a);public function getAddress();public function setAddressHash($v17f1355a72718874cec39024f77c045a);public function getAddressHash();public function setPlace($vebed715e82a0a0f3e950ef6565cdc4a8);public function getPlace();public function setBroken($v9acb44549b41563697bb490144ec6258);public function getBroken();}

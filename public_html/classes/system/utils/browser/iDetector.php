@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Utils\Browser;use UmiCms\System\Cache\iEngineFactory;interface iDetector {public function __construct(iEngineFactory $vee6316dc7b5be0162754ea161e3eaf8f);public function getBrowser();public function getPlatform();public function getVersion();public function isMobile();public function isTablet();public function isRobot();public function getUserAgent();public function setUserAgent($vfa71f997fa1a947459dc5495fdb40b0f);}

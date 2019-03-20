@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Registry;interface iPart {public function __construct(\iRegedit $vddecebdea58b5f264d27f1f7909bab74);public function setPathPrefix($v851f5ac9941d720844d143ed9cfcf60a);public function get($v3c6e0b8a9c15224a8228b9a98ca1531d);public function set($v3c6e0b8a9c15224a8228b9a98ca1531d, $v2063c1608d6e0baf80249c42e2be5804);public function getList();public function contains($v3c6e0b8a9c15224a8228b9a98ca1531d);public function delete($v3c6e0b8a9c15224a8228b9a98ca1531d);}

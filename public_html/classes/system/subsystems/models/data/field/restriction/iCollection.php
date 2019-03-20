@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Data\Field\Restriction;interface iCollection {public function __construct(\IConnection $v4717d53ebfdfea8477f780ec66151dcb);public function delete($vb80bb7740288fda1f201890375a60c8f);public function getFirstByPrefix($v851f5ac9941d720844d143ed9cfcf60a);public function getListByPrefix($v851f5ac9941d720844d143ed9cfcf60a);}

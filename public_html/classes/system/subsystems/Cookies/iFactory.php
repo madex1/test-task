@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cookies;interface iFactory {public function create($vb068931cc450442b63f5b3d276ea4297, $v2063c1608d6e0baf80249c42e2be5804 = '', $vac89cc3bb8407b8f6f24df3d2f088752 = 0);public function createFromHeader($v099fb995346f31c749f6e40db0f395e3);public function setPath($vd6fe1d0be6347b8ef2427fa629c04485);public function setDomain($vad5f82e879a9c5d6b5b442eb37e50551);public function setSecureFlag($v53fac525efd9feacd6bb93e2a6770cfd);public function setHttpOnlyFlag($v7a56464fb30d4aca22654f40d3d2e8eb);}

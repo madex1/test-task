@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Links\Injectors;use UmiCms\Classes\System\Utils\Links\iCollection;trait tLinksCollection {private $v6500964acba13be70b7eaf1a98876db9;public function setLinksCollection(iCollection $vdb6d9b451b818ccc9a449383f2f0c450) {$this->linksCollection = $vdb6d9b451b818ccc9a449383f2f0c450;return $this;}public function getLinksCollection() {if (!$this->linksCollection instanceof iCollection) {throw new \RequiredPropertyHasNoValueException('You should set Links\iCollection first');}return $this->linksCollection;}}

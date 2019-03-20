@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity;use UmiCms\System\Orm\iEntity;interface iMutator {public function __construct(iMapper $v4b9f83e1257a95912768124924dfb143);public function mutate(iEntity $vf5e638cc78dd325906c1298a0c21fb6b, $vb068931cc450442b63f5b3d276ea4297, $v2063c1608d6e0baf80249c42e2be5804);public function mutateList(iEntity $vf5e638cc78dd325906c1298a0c21fb6b, array $v378f03ce656d9b22cb37ba7c2aa6a438);public function getPropertyList();}

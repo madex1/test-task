@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Factory;use UmiCms\System\Orm\Entity\iFactory;trait tInjector {private $v9549dd6065d019211460c59a86dd6536;protected function getFactory() {return $this->factory;}protected function setFactory(iFactory $v9549dd6065d019211460c59a86dd6536) {$this->factory = $v9549dd6065d019211460c59a86dd6536;return $this;}}

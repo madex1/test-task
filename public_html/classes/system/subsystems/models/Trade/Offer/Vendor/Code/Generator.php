@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Vendor\Code;use UmiCms\System\Trade\iOffer;class Generator implements iGenerator {const FORMAT = '%d-%d';public function generate(iOffer $vd60db28d94d538bbb249dcc7f2273ab1) {return sprintf(self::FORMAT, $vd60db28d94d538bbb249dcc7f2273ab1->getId(), $vd60db28d94d538bbb249dcc7f2273ab1->getTypeId());}}

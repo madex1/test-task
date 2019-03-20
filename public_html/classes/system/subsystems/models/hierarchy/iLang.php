@@ -1,0 +1,2 @@
+<?php
+ interface iLang extends iUmiEntinty {public function getTitle();public function setTitle($vd5d3db1765287eef77d7927cc956f50a);public function getPrefix();public function setPrefix($v851f5ac9941d720844d143ed9cfcf60a);public function getIsDefault();public function setIsDefault($v327a6c4304ad5938eaf0efb6cc3e53dc);}

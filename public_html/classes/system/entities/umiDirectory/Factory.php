@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Entities\Directory;class Factory implements iFactory {public function create($vd6fe1d0be6347b8ef2427fa629c04485) {return new \umiDirectory($vd6fe1d0be6347b8ef2427fa629c04485);}}

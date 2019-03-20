@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Repository;use UmiCms\System\Orm\Entity\iRepository;trait tInjector {private $vb3f2035551f6e48c67489ace9f588f94;protected function getRepository() {return $this->repository;}protected function setRepository(iRepository $vb3f2035551f6e48c67489ace9f588f94) {$this->repository = $vb3f2035551f6e48c67489ace9f588f94;return $this;}}

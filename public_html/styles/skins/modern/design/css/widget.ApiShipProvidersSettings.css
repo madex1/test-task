@@ -1,0 +1,189 @@
+/** Виджет настроек провайдеров в ApiShip */
+#asps_wrapper{
+    width: 100%;
+}
+
+.asps_tab_wrapper{
+    max-height: 40px;
+    min-height: 3px;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#asps_tabs{
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+}
+
+#asps_tabs .tab{
+    height: 100%;
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 5px;
+    background: #f2f2f2;
+    color: #ffffff;
+    border-radius: 5px 5px 0 0;
+    border: 1px solid #d9d9d9;
+}
+
+#asps_tabs .tab img{
+    margin:5px 0 0 15px;
+}
+
+#asps_tabs .tab.active{
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    color: #00a0dc;
+    border-bottom: none;
+}
+
+#asps_form_wrapper{
+    min-height: 50px;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    margin-top: -1px;
+}
+
+#asps_form_wrapper .selectize-dropdown-content h3{
+    font-size:14px;
+}
+
+#asps_form_wrapper .selectize-dropdown-content p{
+    font-size:12px;
+}
+
+#asps_form_wrapper .selectize-input{
+    min-height: 30px !important;
+    height: auto !important;
+}
+
+.asps_buttons{
+    margin-top: 10px;
+}
+
+#asps_dialog{
+    width:100%; height:300px;
+    padding: 10px;
+}
+
+#asps_dialog .log{
+    width: 100%;
+    overflow: auto;
+    height: 85%;
+    border: 1px solid #d9d9d9;
+}
+
+#asps_tabs .tab img[alt="iml"] {
+	margin:6px 0 0 30px;
+}
+
+#asps_tabs .tab img[alt="hermes"]{
+    margin: 5px 0 0 5px;
+}
+
+#asps_tabs .tab img[alt="maxi"]{
+    margin: 5px 0 0 20px;
+}
+
+#asps_tabs .tab img[alt="dpd"]{
+    margin: 5px 0 0 25px;
+}
+
+#asps_tabs .tab img[alt="spsr"]{
+    margin: 5px 0 0 30px;
+}
+
+#asps_tabs .tab img[alt="a1"]{
+    margin: 5px 0 0 35px;
+}
+
+#asps_tabs .tab img[alt="dalli"]{
+	margin: 6px 0 0 2px;
+}
+
+a.asps_tabs_nav {
+    cursor: pointer;
+}
+
+a.asps_tabs_nav.disabled {
+    cursor: default;
+}
+
+a.asps_tabs_nav.next {
+    float: right;
+}
+
+a.asps_tabs_nav.prev {
+    float: left;
+}
+
+a.asps_tabs_nav.next:after {
+    content: "";
+    position: absolute;
+    background: #009ed8;
+    height: 4px;
+    width: 30px;
+    top: 52px;
+    right: -20px;
+    transform: rotate(-45deg);
+}
+
+a.asps_tabs_nav.next.disabled:after {
+    content: "";
+    background: #efefef;
+}
+
+a.asps_tabs_nav.next:before {
+    content: "";
+    position: absolute;
+    background: #009ed8;
+    height: 4px;
+    width: 30px;
+    top: 33px;
+    right: -20px;
+    transform: rotate(45deg);
+}
+
+a.asps_tabs_nav.next.disabled:before {
+    content: "";
+    background: #efefef;
+}
+
+a.asps_tabs_nav.prev:after {
+    content: "";
+    position: absolute;
+    background: #009ed8;
+    height: 4px;
+    width: 30px;
+    top: 52px;
+    left: -35px;
+    transform: rotate(45deg)
+}
+
+a.asps_tabs_nav.prev.disabled:after {
+    content: "";
+    background: #efefef;
+}
+
+a.asps_tabs_nav.prev:before {
+    content: "";
+    position: absolute;
+    background: #009ed8;
+    height: 4px;
+    width: 30px;
+    top: 33px;
+    left: -35px;
+    transform: rotate(-45deg);
+}
+
+a.asps_tabs_nav.prev.disabled:before {
+    content: "";
+    background: #efefef;
+}

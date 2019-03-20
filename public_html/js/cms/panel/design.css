@@ -1,0 +1,484 @@
+body {
+	_background-image: url(about:blank);
+	_background-attachment: fixed;
+}
+#u-panel-holder #u-quickpanel {
+    min-width: 890px;
+	height: 38px;
+	background: #000;
+}
+#u-quickpanel .clear {
+	border: none;
+	clear: both !important;
+	display: block !important;
+	float: none !important;
+	font-size: 0 !important;
+	height: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: 0 !important;
+}
+#u-show_hide_btn {
+	background: #000 url(/js/cms/panel/sprite-icons.png) no-repeat -28px -104px;
+	height: 38px;
+	width: 38px;
+	top: 0;
+	right: 0;
+	position: fixed;
+	z-index: 1000001;
+	cursor: pointer;
+	_position: absolute;
+	_top: expression(eval(document.body.scrollTop)+'px');
+}
+#u-show_hide_btn.collapse {
+	display: block;
+	height: 38px;
+	background: #000 url(/js/cms/panel/sprite-icons.png) no-repeat -31px -141px;
+}
+#u-quickpanel, #u-quickpanel-meta {
+	height: 38px;
+	background-color: white;
+	background-repeat: repeat-x;
+	font-family: Tahoma, Arial, Sans-Serif;
+	font-size: 11px;
+	color: #333;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	_position: absolute;
+	_top: expression(eval(document.body.scrollTop)+'px');
+}
+#u-quickpanel {
+	z-index: 600000;
+}
+#u-quickpanel-meta {
+	z-index: 600;
+}
+#u-quickpanel-meta {
+	top: 38px;
+	height: auto;
+	display: none;
+	font-size: 11px;
+}
+#u-quickpanel-meta table {
+	margin:  20px 15px 82px 51px;
+}
+
+#u-quickpanel-meta table td {
+	color: white;
+	font-size:11px;
+	margin:0px;
+	font-family: Tahoma;
+	padding: 2px 0;
+	border: none;
+}
+
+#u-quickpanel-meta  input {
+	width: 600px;
+	font-size: 11px;
+	margin: 0px;
+	float: left;
+	font-family: Tahoma;
+	color: #fff;
+	padding: 8px 12px;
+	background: #383838;
+	border: none;
+	line-height: 1.5;
+}
+
+#u-quickpanel a {
+	text-decoration: none;
+	outline: none;
+	color: #054f82;
+	line-height: 25px;
+	display: block;
+	padding: 0 25px;
+	text-indent: 0;
+}
+#u-quickpanel a:hover {
+	background: #ceeaf6;
+}
+#u-quickpanel div {
+	height: 100%;
+	line-height: 36px;
+	float: left;
+	cursor: pointer;
+	position: relative;
+}
+#u-quickpanel div.act div div {
+	display: block!important;
+}
+#u-quickpanel div.act div {
+	_position: absolute!important;
+	_top: 26px!important;
+	*left: 0px!important;
+}
+#u-quickpanel div.act div div {
+	_position: relative!important;
+	_top: 0px!important;
+}
+#u-quickpanel div.act div ul li {
+	_height: 25px!important;
+}
+#u-quickpanel div.act div.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+}
+#u-quickpanel ul {
+	margin: 0;
+	padding: 0;
+}
+#u-quickpanel ul li {
+	margin: 5px 0;
+	padding: 0;
+	list-style: none;
+}
+#u-quickpanel ul li span {
+	padding: 0 20px;
+}
+#u-quickpanel div#exit {
+	float: right;
+	background: url(/js/cms/panel/sprite-icons.png) no-repeat 2px -107px;
+	width: 38px;
+	border-left: 1px solid #262626;
+	border-right: 1px solid #262626;
+	margin-right: 38px;
+}
+#u-quickpanel div#help {
+	float: right;
+	background: url("/js/cms/panel/sprite-icons.png") no-repeat -36px -40px;
+	width: 38px;
+	border-left: 1px solid #262626;
+}
+#u-quickpanel div#message {
+	float: right;
+	background: url("/js/cms/panel/message.png") no-repeat 5px 5px;
+	width: 26px;
+	margin: 0 5px 0 0;
+}
+#u-quickpanel div#message sup {
+	background-color: red;
+	border: 1px solid white;
+	border-radius: 5px 5px 5px 5px;
+	font-size: 7px;
+	padding: 0 3px;
+	position: relative;
+	right: -10px;
+}
+#u-quickpanel div span.in_ico_bg {
+	background-image: url("/js/cms/panel/sprite-icons.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	width: 26px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+#u-quickpanel div#butterfly,
+#u-quickpanel div#save_edit,
+#u-quickpanel div#edit,
+#u-quickpanel div#edit_menu,
+#u-quickpanel div#last_doc,
+#u-quickpanel div#changelog_dd,
+#u-quickpanel div#meta,
+#u-quickpanel div#note,
+#u-quickpanel div#seo,
+#u-quickpanel div#ieditor-switcher  {
+	padding-right: 15px;
+	padding-left: 5px;
+	border-left: 1px solid #262626;
+	background-repeat: repeat-x;
+}
+#u-quickpanel div#save_edit_meta {
+	display:none;
+}
+#u-quickpanel div#butterfly:hover,
+#u-quickpanel div#edit:hover,
+#u-quickpanel div#edit_menu:hover,
+#u-quickpanel div#last_doc:hover,
+#u-quickpanel div#changelog_dd:hover,
+#u-quickpanel div#meta:hover,
+#u-quickpanel div#note:hover,
+#u-quickpanel div#seo:hover,
+#u-quickpanel div#ieditor-switcher:hover {
+	background: #1a1a1a;
+}
+#u-quickpanel div#butterfly.act,
+#u-quickpanel div#edit.act,
+#u-quickpanel div#edit_menu.act,
+#u-quickpanel div#last_doc.act,
+#u-quickpanel div#changelog_dd.act,
+#u-quickpanel div#meta.act,
+#u-quickpanel div#note.act,
+#u-quickpanel div#ieditor-switcher.act {
+	background: #444;
+}
+#u-quickpanel div#butterfly span.in_ico_bg {
+	background-position: -4px -7px;
+	width: 40px;
+}
+#u-quickpanel div#meta  {
+	border-left: 1px solid #262626;
+}
+#u-quickpanel div#edit,
+#u-quickpanel div#butterfly {
+	font-weight: bold;
+}
+#u-quickpanel div#butterfly div.bg {
+	width: 430px;
+	cursor: default;
+	top: 38px;
+	left: -1px;
+	position: absolute;
+	display: none;
+	height: auto;
+	font-weight: normal;
+	/*background: #f2f2f2 url("/js/cms/panel/mod_bg.png") repeat-y center top;*/
+	background-color: #f2f2f2;
+	border: 1px solid #e2e2e2;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#u-quickpanel div#butterfly div.bg div.separate {
+	border-top: 1px solid #262626;
+}
+#u-quickpanel div#butterfly div ul {
+	float: left;
+	width: 50%;
+}
+#u-quickpanel div#butterfly div ul#u-mods-cont-left,
+#u-quickpanel div#butterfly div ul#u-mods-utils {
+	width: 45%;
+}
+#u-quickpanel div#edit span.in_ico_bg {
+	background-position: -88px -40px;
+}
+#u-quickpanel div#edit.act span.in_ico_bg {
+	background-position: -125px -107px;
+}
+#u-quickpanel div#ieditor-switcher span.in_ico_bg {
+	background-position: -124px -37px;
+}
+#u-quickpanel div#edit_menu span.in_ico_bg {
+	background-position: -62px -107px;
+	width: 38px;
+}
+#u-quickpanel div#last_doc span.in_ico_bg,
+#u-quickpanel div#changelog_dd span.in_ico_bg {
+	background-position: -9px -45px;
+}
+#u-quickpanel div#meta span.in_ico_bg,
+#u-quickpanel div#seo span.in_ico_bg {
+	background-position: -125px -71px;
+}
+#u-quickpanel div#note span.in_ico_bg {
+	background-position: -47px -5px;
+}
+#u-quickpanel div#save_edit {
+	display: none;
+}
+#u-quickpanel div#save_edit div {
+	width: 25px;
+}
+#u-quickpanel div#save_edit div#save {
+	background: url(/js/cms/panel/sprite-icons.png) no-repeat -80px 1px;
+	width: 38px;
+}
+#u-quickpanel div#save_edit div#save.save_me {
+	background: url("/js/cms/panel/sprite-icons.png") no-repeat 4px -141px;
+}
+#u-quickpanel div#save_edit div#edit_back {
+	background: url(/js/cms/panel/sprite-icons.png) no-repeat -111px 1px;
+	width: 38px;
+}
+#u-quickpanel div#save_edit div#edit_back.ac {
+	background-position: -32px -75px;
+	width: 38px;
+}
+#u-quickpanel div#save_edit div#edit_next {
+	background: url(/js/cms/panel/sprite-icons.png) no-repeat -62px -74px;
+	width: 38px;
+}
+#u-quickpanel div#save_edit div#edit_next.ac {
+	width: 38px;
+	background-position: 12px -75px;
+}
+#u-quickpanel div#save_edit_meta  {
+	border-left:0;
+}
+#u-quickpanel div#save_edit_meta div {
+	width: 25px;
+}
+#u-quickpanel div#save_edit_meta div#save_meta {
+	background: url("/js/cms/panel/quickpanel_bg_new.png") no-repeat -3px -43px;
+}
+#u-quickpanel div#edit_menu {
+	padding-right: 0;
+	width: 38px;
+}
+#u-quickpanel div#edit_menu span.in_ico_bg {
+	margin-left: 0;
+}
+#u-quickpanel div#edit div,
+#u-quickpanel div#last_doc div,
+#u-quickpanel div#edit_menu div,
+#u-quickpanel div#changelog_dd div {
+	cursor: default;
+	top: 38px;
+	left: 0;
+	height: auto;
+	position: absolute;
+	display: none;
+	background-color: #f2f2f2;
+	border: 1px solid #e2e2e2;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#u-quickpanel div#edit_menu div {
+	z-index:10001;
+}
+#u-quickpanel div div ul li a {
+	white-space: nowrap;
+}
+
+.u-ticket {
+	position:			absolute;
+	border:				1px dashed red;
+	background-color:	#ddd;
+	z-index:			599;
+}
+
+.u-ticket-comment {
+	z-index:			599;
+	position:			absolute;
+	text-align:			left;
+	text-decoration:	none;
+	padding:			5px;
+	background-color:	#FFFFE1;
+	border:				1px solid #000000;
+	color:				#000000;
+	font-family:		Verdana;
+	font-size:			11px;
+	font-weight:		normal;
+	cursor: 			move;
+	display: 			flex;
+	flex-direction: 	column;
+	flex-wrap: 			wrap;
+	justify-content: 	space-between;
+	align-content: 		stretch;
+}
+
+	.u-ticket-comment div:first-child {
+		font-weight:		bold;
+		display: 			block;
+		height: 			20px;
+	}
+
+	.u-ticket-comment textarea {
+		overflow:			hidden;
+		margin:				0px;
+		margin-top:			7px;
+		padding:			0px;
+		background-color:	inherit;
+		color:				#000;
+		font-family:		Verdana;
+		font-size:			11px;
+		font-weight:		normal;
+		text-decoration:	none;
+		letter-spacing:		-1px;
+		display: 			block;
+		resize:				none;
+		flex-grow: 			2;
+		min-height: auto;
+	}
+
+	.u-ticket-comment a {
+		color:				#000000;
+		cursor:				pointer;
+		font-family:		Verdana;
+		font-size:			11px;
+		font-weight:		normal;
+		letter-spacing:		-1px;
+		margin:				0 5px 0 0;
+		text-align:			left;
+		text-decoration:	underline;
+		display: 			inline-block;
+		height: 			15px;
+		max-width: 			88px;
+	}
+	.u-ticket-comment.ui-resizable {
+		position: absolute;
+	}
+
+div.meta_buttons {
+	position:absolute;
+	top: 173px;
+}
+div.meta_buttons a {
+	position: absolute;
+	right: -598px;
+	top: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+#u-quickpanel-meta div.meta_buttons input {
+	width: auto;
+	font-size: 12px;
+	background: #00a0dc;
+	border-radius: 5px;
+	padding: 12px 23px;
+}
+div.meta_count {
+	margin-left: 10px;
+	width: 30px;
+	float: left;
+	margin-top:7px;
+}
+#u-quickpanel div a.a_new {
+	display:inline;
+	padding: 0;
+}
+#u-quickpanel div a.a_new:hover {
+	background-image: url('/js/cms/panel/quickpanel_bg_n.png');
+	background:	none !important;
+}
+#u-quickpanel #seo a {
+	display: inline;
+	padding:0;
+}
+.umi-quick-messages {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font: 12px Tahoma;
+	color: #FFF;
+}
+.umi-quick-messages .message {
+	width: 220px;
+	padding: 15px;
+	margin: 25px;
+	background-color: #666;
+}
+.umi-quick-messages .header {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.umi-quick-message .content {
+	margin-bottom: 10px;
+}
+.umi-quick-messages a {
+	color: #FFF;
+}
+.umi-quick-messages .sender {
+	font-style: italic;
+	margin-top: 10px;
+}

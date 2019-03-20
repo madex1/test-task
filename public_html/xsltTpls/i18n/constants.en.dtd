@@ -1,0 +1,240 @@
+<!ENTITY search-default-text "Search">
+
+<!ENTITY yes "Yes">
+<!ENTITY no "No">
+<!ENTITY nbsp "&#160;">
+<!ENTITY welcome "Welcome,">
+<!ENTITY errors "Errors">
+<!ENTITY error "Error">
+<!ENTITY pay "Pay">
+<!ENTITY enter-captcha "Enter the code">
+<!ENTITY reset-captcha "Reload the code">
+
+<!ENTITY login "Login">
+<!ENTITY password "Password">
+<!ENTITY current-password "Confirm current password">
+<!ENTITY log-in "Login">
+<!ENTITY log-out "Logout">
+<!ENTITY office "Profile">
+<!ENTITY registration "Registration">
+<!ENTITY forgot_your_password "Forgot your password?">
+<!ENTITY send_password "Resend password">
+<!ENTITY password_was_sent "Your password was sent to your e-mail.">
+<!ENTITY on-fast-edit "On Edit">
+<!ENTITY go_to_admin "To admin">
+<!ENTITY personal_info "Personal info">
+
+<!ENTITY password_confirm "Repeat the password">
+<!ENTITY e-mail "E-mail">
+<!ENTITY name "Name">
+<!ENTITY registration_do "Register now">
+<!ENTITY registration_done "You account was registered successfuly.">
+<!ENTITY registration-error "Error occured.">
+<!ENTITY registration-error-user-exists "User already exists.">
+<!ENTITY registration-activation-note "Please check your inbox and follow the link to activate your account.">
+<!ENTITY forgot_your_password-note "Please check your inbox and follow the link to restore password.">
+<!ENTITY account-activated "Activation successful.">
+<!ENTITY wrong_activation_code "Incorrect activation code">
+<!ENTITY login_do_try_again "Incorrect login or password, please check and repeat.">
+<!ENTITY save_changes "Save changes">
+
+<!ENTITY news-archive "News archive">
+<!ENTITY news-back "Back to news archive">
+<!ENTITY news-realted "Related news">
+
+<!ENTITY blog-addpost "Add post">
+
+<!ENTITY comments "Comments">
+<!ENTITY comments-vk "Comments VKontakte">
+<!ENTITY comment "Comment">
+<!ENTITY no-comments "Not commented yet">
+<!ENTITY comment_text "Your comment">
+<!ENTITY comment-submit "Add comment">
+
+<!ENTITY comment-posted "Posted">
+<!ENTITY comment-login "Please, log in to add your comment">
+<!ENTITY comment_author_email "Your e-mail">
+<!ENTITY comment_author_name "Your name">
+<!ENTITY comment-title "Title">
+<!ENTITY comment-message "Message">
+<!ENTITY comment-tags "Tags">
+<!ENTITY comment-question "Question">
+<!ENTITY comment-ask-question "Ask question">
+<!ENTITY comment-answer "Answer">
+<!ENTITY comment-answer-sent "Your question is sent">
+
+<!ENTITY compare-title "Goods compare">
+<!ENTITY compare-submit "Compare now">
+<!ENTITY compare-add "Add to compare">
+<!ENTITY compare-del "Remove from compare">
+<!ENTITY basket-add "Add to cart">
+<!ENTITY basket-add-short "Add">
+<!ENTITY clear-basket "Clear cart">
+<!ENTITY purchase_one_click "1 click order">
+
+<!ENTITY item_description "Description">
+<!ENTITY recommended-items "Recommended items">
+
+<!ENTITY basket "Cart">
+<!ENTITY cart_empty "Your cart is empty">
+<!ENTITY basket-items-text ", total cost:">
+
+<!ENTITY view-orders-list "Go to the orders list">
+
+<!ENTITY previous-page "Previous">
+<!ENTITY next-page "Next">
+
+<!ENTITY apply "Apply">
+<!ENTITY reset "Cancel">
+
+<!ENTITY range-from "from">
+<!ENTITY range-to "to">
+
+<!ENTITY summary-price "Subtotal">
+<!ENTITY basket-item "Item name">
+<!ENTITY price "Price">
+<!ENTITY amount "Qty">
+<!ENTITY sum "Total">
+
+<!ENTITY item-discount "Item discount">
+<!ENTITY order-discount "Order discount">
+<!ENTITY order-bonus "Spent bonus">
+<!ENTITY discounted-sum "Discounted sum">
+<!ENTITY delivery "Delivery">
+
+<!ENTITY delete "Remove">
+<!ENTITY begin-purchase "Checkout">
+<!ENTITY continue "Continue">
+<!ENTITY choose-delivery-address "Specify your delivery address">
+<!ENTITY choose-self-delivery "or self-delivery">
+<!ENTITY or-new-delivery-address "or enter new delivery address">
+<!ENTITY new-delivery-address "New delivery address">
+<!ENTITY self-delivery  "Pickup">
+<!ENTITY delivery_agent "Delivery method">
+<!ENTITY choose-legal_person "Select legal person">
+<!ENTITY new-legal-person "New legal person">
+<!ENTITY in-progress "In progress">
+<!ENTITY select-payment "Select payment variant">
+<!ENTITY credit-request "Preparation of credit request">
+<!ENTITY credit-canceled "Credit request is canceled">
+<!ENTITY order-error "Order creation error">
+<!ENTITY make-bill "Make out a bill">
+
+<!ENTITY empty_section_name "Section name">
+
+<!ENTITY empty_page_name "Page title">
+<!ENTITY empty_page_date "Date">
+<!ENTITY empty_page_anons "Announce">
+<!ENTITY empty_page_content "Content">
+<!ENTITY empty "Empty">
+
+<!ENTITY search "Search">
+<!ENTITY search-founded-left "By your request">
+<!ENTITY search-founded-right "found">
+<!ENTITY search_empty_result "nothing found">
+
+<!ENTITY forum "Forum">
+<!ENTITY forum-topics "Topics">
+<!ENTITY forum-topic-post "Post topic">
+<!ENTITY forum-topics-count "Topics">
+<!ENTITY forum-answers "Answers">
+<!ENTITY forum-last-message "Last message">
+<!ENTITY forum-message-date "Message date">
+
+<!ENTITY empty-category "This category is empty">
+
+<!ENTITY orders "Orders">
+<!ENTITY order_number "Order number">
+<!ENTITY order_status "Order status">
+<!ENTITY order_method "Payment method">
+<!ENTITY order_sum "Order summ">
+<!ENTITY number "N">
+<!ENTITY date-from "from">
+<!ENTITY date-from-1 "from">
+
+<!ENTITY payment_type "Payment methods" >
+<!ENTITY payment-redirect-text "Click the Pay button to checkout" >
+
+<!ENTITY copyright "All rights reserved.">
+
+<!ENTITY property-recommended "recommended_items">
+<!ENTITY property-description "description">
+<!ENTITY group-parameter "item_properties">
+<!ENTITY default-date-format "d.m.Y">
+<!ENTITY amount-prefix "items">
+<!ENTITY specials-limit "9">
+<!ENTITY empty-photo "/templates/demodizzy/images/nofoto.jpg">
+<!ENTITY show-photo "Show all pictures">
+
+<!ENTITY emarket-order-failed "Order was failed">
+<!ENTITY emarket-order-successful "Order successfully placed.">
+
+<!ENTITY newsletters "Newsletters">
+<!ENTITY subscribe "Subscribe">
+
+<!ENTITY vote "Poll">
+<!ENTITY reply "Vote">
+<!ENTITY total-votes "All votes">
+<!ENTITY vote_no_results "Poll no results">
+<!ENTITY votes-rate "Rating">
+<!ENTITY votes-vote "Your rating">
+<!ENTITY votes-title "You have already voted">
+
+<!ENTITY download "Download">
+<!ENTITY download-file-name "File name">
+<!ENTITY download-file-size "File size">
+<!ENTITY download-part-one "If downloading does not start in 10 seconds, use">
+<!ENTITY download-part-two "this link">
+<!ENTITY max-file-size "Maximum upload file size">
+<!ENTITY user_not_permitted "You are not permitted to view this content">
+
+<!ENTITY mobile-mode-on "Mobile view">
+<!ENTITY for-print "Print">
+
+<!ENTITY recent-pages-block "Last viewed">
+<!ENTITY recent-pages-text "Your recently visited items">
+<!ENTITY recent-pages-delete "Delete from list">
+<!ENTITY recent-pages-empty "Recently viewed items list is empty">
+<!ENTITY recent-pages-all "Full list">
+
+<!ENTITY dispatch-you-to "You are subscribed to dispatches">
+<!ENTITY dispatch-you-from "You are unsubscribed from dispatches">
+<!ENTITY dispatch-unsubscribe 'If you don’t want to receive our dispatch, you can unsubscribe from it, using a'>
+<!ENTITY dispatch-unsubscribe-part 'link'>
+
+<!ENTITY return_to_catalog "Return to <a href='{$lang-prefix}/'>catalog</a> and add items into your cart.">
+<!ENTITY continue_shopping "Continue shopping">
+
+<!ENTITY order_is_being_processed_message "your order is in process.<br />The confirmation mail was sent to your e-mail.<br />You can trace status of your orders in">
+<!ENTITY personal_account "personal account">
+<!ENTITY orders_tab "on the tab &quot;Orders&quot;.">
+
+<!ENTITY pay-by-bonuses "Pay by bonuses:">
+<!ENTITY can-use-bonuses "You can use bonuses to pay for your order.">
+<!ENTITY order_summ "Order summ">
+<!ENTITY available-bonuses "Available bonuses">
+<!ENTITY spend_bonus "Spend bonuses">
+
+<!ENTITY slab-view "Tile">
+<!ENTITY list-view "List">
+
+<!ENTITY type-of-sort "Sort by">
+<!ENTITY sort-price "Price">
+<!ENTITY sort-name "Name">
+
+<!ENTITY print-invoice "Print Invoice">
+
+<!ENTITY empty-appoint-menu-item "Appointment menu item">
+<!ENTITY empty-appoint-hint-step "Choose a primary service. The operator will ask about additional services. These are the base prices. Not a public offer.">
+<!ENTITY empty-appoint-dont-care-button "I don't care">
+<!ENTITY empty-appoint-dont-care-hint "If you don't want to choose (the operator will help to make a choice)">
+<!ENTITY empty-appoint-book-time-button "Book time">
+<!ENTITY empty-appoint-book-time-hint "After completing the form the administrator will contact you.">
+<!ENTITY appointments-menu-link "Make an appointment">
+
+<!ENTITY appoint_service_choice_title 'Step 1 (active/chosen) - "choose a service"'>
+<!ENTITY appoint_personal_choice_title 'Step 2 (active/chosen) - "choose a specialist"'>
+<!ENTITY appoint_date_choice_title 'Step 3 (active/chosen) - "choose a date"'>
+<!ENTITY appoint_personal_step_title 'Step 2 (not visited) - "Specialist (please fill in)"'>
+<!ENTITY appoint_date_step_title 'Step 3 (not visited) - "Visit date (please fill in)"'>
+<!ENTITY appoint_confirm_step_title 'Step 4 (not visited) - "Confirm appointment"'>

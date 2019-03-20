@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Links;use UmiCms\Classes\System\Enums\Enum;use UmiCms\Classes\System\Enums\EnumElementNotExistsException;class SourceTypes extends Enum {const OBJECT_KEY = 'object';const TEMPLATE_KEY = 'template';protected function getDefaultValue() {throw new EnumElementNotExistsException('SourceTypes not provides default value');}}

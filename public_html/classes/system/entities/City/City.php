@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Entities\City;class City extends \umiObjectProxy implements iCity {const CITY_TYPE_GUID = 'sytem-citylist';public function __construct(\iUmiObject $va8cfde6331bd59eb2ac96f8911c4b666) {parent::__construct($va8cfde6331bd59eb2ac96f8911c4b666);$this->validateObjectTypeGUID(self::CITY_TYPE_GUID);}public function getName() {return (string) $this->getObject()    ->getName();}}

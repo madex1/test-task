@@ -1,0 +1,2 @@
+<?php
+ class domainMirrorWrapper extends translatorWrapper {public function translate($va8cfde6331bd59eb2ac96f8911c4b666) {return $this->translateData($va8cfde6331bd59eb2ac96f8911c4b666);}protected function translateData(iDomainMirror $v95be0a2e6132b4fa2294808f7dbcc52a) {return [    'attribute:id' => $v95be0a2e6132b4fa2294808f7dbcc52a->getId(),    'attribute:host' => $v95be0a2e6132b4fa2294808f7dbcc52a->getHost()   ];}}

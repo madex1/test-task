@@ -1,0 +1,2 @@
+<?php
+ class ManifestSourceFactory implements iManifestSourceFactory {public function create($v599dcce2998a6b40b1e38e8c6006cb0a = self::CORE, $vb068931cc450442b63f5b3d276ea4297 = null) {switch ($v599dcce2998a6b40b1e38e8c6006cb0a) {case self::CORE : {return new CoreManifestSource();}case self::MODULE : {return new ModuleManifestSource($vb068931cc450442b63f5b3d276ea4297);}case self::SOLUTION : {return new SolutionManifestSource($vb068931cc450442b63f5b3d276ea4297);}default : {throw new Exception('Unknown type: ' . $v599dcce2998a6b40b1e38e8c6006cb0a);}}}}

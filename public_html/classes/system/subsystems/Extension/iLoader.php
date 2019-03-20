@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Extension;use UmiCms\Classes\System\Entities\Directory\iFactory as DirectoryFactory;use UmiCms\Classes\System\Entities\File\iFactory as FileFactory;interface iLoader {public function __construct(DirectoryFactory $vb7a82c37d8c13db7202ec4890aa47a7d, FileFactory $ve9d2ea3c13cc8f3b974ffbe8695cba02);public function setModule(\def_module $v22884db148f0ffb0d830ba431102b0b5);public function loadCommon();public function loadAdmin();public function loadSite();}

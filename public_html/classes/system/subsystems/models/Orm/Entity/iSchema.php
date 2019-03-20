@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity;interface iSchema {public function __construct(iAccessor $v9efcb42ee143be09c45d33ed2fba175b);public function getContainerName();public function getExchangeName();public function getRelationFieldList();public function getRelatedContainerNameList();public function getRelatedExchangeNameList();}

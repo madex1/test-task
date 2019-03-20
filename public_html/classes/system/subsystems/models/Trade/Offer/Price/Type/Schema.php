@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Type;use UmiCms\System\Orm\Entity\Schema as AbstractSchema;class Schema extends AbstractSchema implements iSchema {protected function getNameSpaceRoot() {return 'UmiCms\System\Trade\\';}}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Import\UmiDump\Entity\Helper\SourceIdBinder\Factory;use UmiCms\System\Import\UmiDump\Entity\Helper\SourceIdBinder\iFactory;trait Injector {private $v399d0eca5e33db9fd33a4b3bf909c331;public function setSourceIdBinderFactory(iFactory $v9549dd6065d019211460c59a86dd6536) {$this->sourceIdBinderFactory = $v9549dd6065d019211460c59a86dd6536;return $this;}public function getSourceIdBinderFactory() {return $this->sourceIdBinderFactory;}}

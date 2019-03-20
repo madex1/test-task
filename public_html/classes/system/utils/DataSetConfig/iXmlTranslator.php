@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\DataSetConfig;interface iXmlTranslator {public function __construct(\iUmiObjectTypesCollection $v8d51528cb018f443ee726b3b85da495b, \iCmsController $v8b1dc169bf460ee884fceef66c6607d6);public function translate($v2245023265ae4cf87d02c8b6ba991139);}

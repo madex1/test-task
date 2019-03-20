@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Protection;class HashComparator implements iHashComparator {public function equals($v259c8c22a88fafc6406b942136250f03, $v9077a54854311ad32ae36f1803187289) {return function_exists('hash_equals')    ? hash_equals($v259c8c22a88fafc6406b942136250f03, $v9077a54854311ad32ae36f1803187289)    : strcmp($v259c8c22a88fafc6406b942136250f03, $v9077a54854311ad32ae36f1803187289) == 0;}}

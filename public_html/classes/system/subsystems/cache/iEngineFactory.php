@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache;interface iEngineFactory {public function create($vb068931cc450442b63f5b3d276ea4297 = \databaseCacheEngine::NAME);public function createNew($vb068931cc450442b63f5b3d276ea4297);}

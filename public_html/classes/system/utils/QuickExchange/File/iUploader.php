@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\QuickExchange\File;use UmiCms\System\Request\iFacade as iRequest;interface iUploader {public function __construct(iRequest $v10573b873d2fa5a365d558a45e328e47, \iConfiguration $vccd1066343c95877b75b79d47c36bebe);public function upload();}

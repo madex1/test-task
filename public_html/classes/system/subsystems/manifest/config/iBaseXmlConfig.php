@@ -1,0 +1,2 @@
+<?php
+ interface iBaseXmlConfig {public function __construct($v4d327509eb542a0a5ada5b1dd436102e);public function getValue($v3d788fa62d7c185a1bee4c9147ee1091);public function getList($v3d788fa62d7c185a1bee4c9147ee1091, array $v736b91750e516139acc13c5eb6564f92 = []);public function getName();}

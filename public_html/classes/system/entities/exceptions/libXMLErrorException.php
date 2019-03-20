@@ -1,0 +1,2 @@
+<?php
+ class libXMLErrorException extends coreException {public function __construct($v11a5b091e0140c519d8d5a323427a5da, $vc13367945d5d4c91047b3b50234aa7ab = 0, $v990212f8ef70507a61ec72b2ae25732a = '') {$this->code = $v11a5b091e0140c519d8d5a323427a5da->code;$this->message = $v11a5b091e0140c519d8d5a323427a5da->message;$this->line = $v11a5b091e0140c519d8d5a323427a5da->line;$this->file = $v11a5b091e0140c519d8d5a323427a5da->file;}}

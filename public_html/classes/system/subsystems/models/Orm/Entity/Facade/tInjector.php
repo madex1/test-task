@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Facade;use UmiCms\System\Orm\Entity\iFacade;trait tInjector {private $v00c169d5e8a598d3908199ef8c64c279;protected function setFacade(iFacade $v00c169d5e8a598d3908199ef8c64c279) {$this->facade = $v00c169d5e8a598d3908199ef8c64c279;return $this;}protected function getFacade() {return $this->facade;}}

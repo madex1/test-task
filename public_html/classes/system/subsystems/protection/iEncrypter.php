@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Protection;interface iEncrypter {public function __construct(\iConfiguration $vccd1066343c95877b75b79d47c36bebe);public function encrypt($vb45cffe084dd3d20d928bee85e7b0f21);public function decrypt($v5d82d510de4fb1e0b1a803f0f9685dc8);}

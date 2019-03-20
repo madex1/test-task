@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\QuickExchange\File;use UmiCms\Classes\System\Entities\File\iFactory as FileFactory;use UmiCms\Classes\System\Utils\QuickExchange\Source\iDetector as SourceDetector;use UmiCms\System\Response\iFacade as Response;interface iDownloader {public function __construct(   SourceDetector $vc4c19d7c35dd75d985c1f4ace5d40c80,   FileFactory $ve9d2ea3c13cc8f3b974ffbe8695cba02,   Response $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe,   \iConfiguration $vccd1066343c95877b75b79d47c36bebe  );public function download();}

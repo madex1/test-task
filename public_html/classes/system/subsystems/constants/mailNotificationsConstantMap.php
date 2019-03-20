@@ -1,0 +1,2 @@
+<?php
+ class mailNotificationsConstantMap extends baseUmiCollectionConstantMap {const TABLE_NAME = 'cms3_mail_notifications';const EXCHANGE_RELATION_TABLE_NAME = 'cms3_import_mail_notifications';const LANG_ID_FIELD_NAME = 'lang_id';const DOMAIN_ID_FIELD_NAME = 'domain_id';const MODULE_FIELD_NAME = 'module';}

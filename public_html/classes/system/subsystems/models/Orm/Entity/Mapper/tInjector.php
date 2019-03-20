@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Mapper;use UmiCms\System\Orm\Entity\iMapper;trait tInjector {private $v4b9f83e1257a95912768124924dfb143;protected function setMapper(iMapper $v4b9f83e1257a95912768124924dfb143) {$this->mapper = $v4b9f83e1257a95912768124924dfb143;return $this;}protected function getMapper() {return $this->mapper;}}

@@ -1,0 +1,2 @@
+<?php
+ use UmiCms\System\Import\UmiDump\Helper\Entity\iSourceIdBinder;interface iXmlExporter {public function addObjects($v7beef54c8a75efe23880c9c3bfaf46d7);public function addTypes($va9e2e7908a1f06effc849966dcf44b1c);public function addEntities(array $v82524334d802a9f208f312b0f69a98d7);public function execute();public function isCompleted();public function getEntitySourceIdBinder();}

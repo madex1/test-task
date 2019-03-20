@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Captcha\Settings;interface iSettings {public function getStrategyName();public function setStrategyName($vb068931cc450442b63f5b3d276ea4297);public function shouldRemember();public function setShouldRemember($v327a6c4304ad5938eaf0efb6cc3e53dc);public function getDrawerName();public function setDrawerName($vb068931cc450442b63f5b3d276ea4297);public function getSitekey();public function setSitekey($v4d472c8c75568efd59744f7399f271f7);public function getSecret();public function setSecret($v5ebe2294ecd0e0f08eab7690d2a6ee69);}

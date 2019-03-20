@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+	<title>elFinder 2.1.x source version with PHP connector</title>
+	<script data-main="./main.js" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>
+	<script type="text/javascript" src="/styles/common/js/utilities.js"></script>
+	<script>
+		/**
+		 * Возвращает get параметры
+		 * @returns {Object}
+		 */
+		function getArgumentList() {
+			var argumentList = new Object();
+			var query = location.search.substring(1);
+			var pairs = query.split("&");
+			for (var i = 0; i < pairs.length; i++) {
+				var pos = pairs[i].indexOf('=');
+
+				if (pos === -1) {
+					continue;
+				}
+
+				var name = pairs[i].substring(0,pos);
+				var value = pairs[i].substring(pos+1);
+				argumentList[name] = unescape(value);
+			}
+			return argumentList;
+		}
+
+		/**
+		 * Возврашает максимальный размер загружаемого файла
+		 * @returns {number}
+		 */
+		function getMaxFileSize() {
+			var defaultMaxFileSize = 83886080;
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', '/udata/data/getAllowedMaxFileSize', false);
+			xhr.send();
+
+			if (xhr.status != 200) {
+				return defaultMaxFileSize;
+			}
+
+			var maxFileSize = /<!\[CDATA\[(.*)]]>/.exec(xhr.responseText)[1] * 1024 * 1024 ;
+
+			return (typeof(maxFileSize) == 'number') ? maxFileSize : defaultMaxFileSize;
+		}
+
+		function getIfrDoc(frame) {
+			frame = (frame.length > 1) ? frame[frame.length - 2] : frame;
+			var d = frame.contentWindow || frame.contentDocument || window.document;
+			if (d.document) {
+				d = d.document;
+			}
+			return d;
+		}
+
+		var argumentList = getArgumentList();
+
+		if (window.parent && !window.parent.selectedFiles) {
+			window.parent.selectedFiles = {};
+		}
+
+		var csrf = (parent && parent.uAdmin && parent.uAdmin.csrf) || (parent && parent.csrfProtection && parent.csrfProtection.getToken && parent.csrfProtection.getToken()) || '';
+		var startPathHash = (getCookie('remember_last_folder') === null) ? argumentList.folder_hash : '';
+
+		/**
+		 * Применяет выбранный в файловом менеджере файл.
+		 * Содержит реализации под разные контролы, нуждается в рефакторинге
+		 * @param {Object} file файл.
+		 */
+		function appendSelectedFile(file) {
+			if (!file) {
+				file = {
+					hash: '',
+					path: ''
+				};
+			}
+
+			var argumentList = getArgumentList();
+			window.parent.selectedFiles[argumentList.id] = file.hash;
+			var filePath = '/' + file.path;
+			filePath = filePath.replace(/\\/g, '/');
+
+			if (typeof argumentList['onGetFile'] === 'string' && typeof window.parent[argumentList['onGetFile']] === 'function') {
+				window.parent[argumentList['onGetFile']](filePath, argumentList.id);
+			}
+
+			if (typeof(argumentList.id) !== 'undefined') {
+
+				var select = window.parent.document.getElementById(argumentList.id);
+				var frame  = window.parent.document.getElementsByTagName('iframe');
+
+				if (!select) {
+					if (frame.length > 1 && frame[frame.length - 2].src.indexOf(location.host) !== -1) {
+						select = frame[frame.length - 2].contentDocument ?
+							frame[frame.length - 2].contentDocument.getElementById(argumentList.id) :
+							frame[frame.length - 2].contentWindow.document.getElementById(argumentList.id);
+					}
+				}
+
+				if (!select && frame.length > 1 && frame[frame.length - 2].src.indexOf(location.host) !== -1) {
+					select = frame[frame.length - 2].contentWindow[argumentList.id];
+				}
+
+				if (!select) {
+					var searchFrameRecursive = function(doc) {
+						var frames = doc.getElementsByTagName('iframe');
+						if (!frames || !frames.length) {
+							return null;
+						}
+						var i, len;
+						for (i = 0, len = frames.length; i < len; i++) {
+							var frameItem = frames[i];
+							var host = document.location.protocol + "//" + document.location.hostname;
+
+							if (!frameItem.src || frameItem.src.indexOf(host) !== 0) {
+								continue;
+							}
+
+							var frameDocument = frameItem.contentDocument || frameItem.contentWindow.document;
+							var result = frameDocument.getElementById(argumentList.id);
+
+							if (!result) {
+								result = searchFrameRecursive(frameDocument);
+							}
+
+							if (result) {
+								return result;
+							}
+						}
+						return null;
+					};
+					select = searchFrameRecursive(window.top.document);
+				}
+
+				if (select) {
+					if (select.control) {
+						select.control.add(filePath, true);
+					} else {
+						select.value = filePath;
+						if (window.parent.tinymce && window.parent.tinymce.majorVersion < 4) {
+							// Вставка изображения в блок предварительного просмотра
+							var element = getIfrDoc(frame).getElementById('prev');
+
+							if (element) {
+								element.innerHTML = '<img src="' + select.value + '">';
+							}
+						}
+
+						window.parent.jQuery(select).trigger('change');
+					}
+				}
+			}
+		}
+
+		define('elFinderConfig', {
+			defaultOpts: {
+				url: '/admin/data/elfinder_connector/', // connector URL (REQUIRED)
+				lang: argumentList.lang,
+				showFiles: 1000,
+				height: 580,
+				width: 1198,
+				requestType: 'post',
+				startPathHash: startPathHash,
+				uploadMaxChunkSize: getMaxFileSize(),
+				commandsOptions: {
+					getfile: {
+						multiple: argumentList.multiple
+					}
+				},
+				getFileCallback: function(files, fm) {
+					files = Array.isArray(files) ? files : [files];
+
+					for (var i = 0; i < files.length; i++) {
+						appendSelectedFile(files[i]);
+					}
+
+					if (window && window.parent && window.parent.jQuery && window.parent.jQuery.closePopupLayer) {
+						var popupName = getArgumentList()['popup_name'] ? getArgumentList()['popup_name'] : 'Filemanager';
+						window.parent.jQuery.closePopupLayer(popupName, files);
+					}
+
+					return false;
+				},
+				rememberLastDir: true,
+				uiOptions : {
+					toolbar : [
+						['home', 'back', 'forward', 'up', 'reload'],
+						['mkdir', 'mkfile', 'upload'],
+						['open', 'download', 'getfile'],
+						['undo', 'redo'],
+						['copy', 'cut', 'paste', 'rm', 'empty'],
+						['duplicate', 'rename', 'resize', 'chmod'],
+						['selectall', 'selectnone', 'selectinvert'],
+						['quicklook', 'info'],
+						['search'],
+						['view', 'sort'],
+						['preference', 'help']
+					],
+					tree : {
+						openRootOnLoad : true,
+						syncTree : true
+					}
+				},
+				sound : false,
+				resizable: false,
+				contextmenu : {
+					navbar : [
+						'open', 'opennew', 'download', '|',
+						'upload', 'mkdir', '|',
+						'copy', 'cut', 'paste', 'duplicate', '|',
+						'rm', 'empty', '|',
+						'rename', '|',
+						'archive', '|',
+						'places', 'info', 'chmod'
+					],
+					cwd    : [
+						'undo', 'redo', '|',
+						'back', 'up', 'reload', '|',
+						'upload', 'mkdir', 'mkfile', 'paste', '|',
+						'empty', '|',
+						'view', 'sort', 'selectall', 'colwidth', '|',
+						'places', 'info', 'chmod'
+					],
+					files  : [
+						'getfile', '|' ,
+						'open', 'opennew', 'download', 'opendir', 'quicklook', '|',
+						'upload', 'mkdir', '|',
+						'copy', 'cut', 'paste', 'duplicate', '|',
+						'rm', 'empty', '|',
+						'rename', 'resize', '|',
+						'archive', 'extract', '|',
+						'selectall', 'selectinvert', '|',
+						'places', 'info', 'chmod'
+					]
+				},
+				handlers : {
+					// Открывает последнюю папку или переданную
+					init : function(e, self) {
+						self.startDir();
+					},
+
+					opendone : function(e, self) {
+						var scrollToSelectedFilesInterval = setInterval(function() {
+							var selectedFileHashes = window.parent.selectedFiles[argumentList.id] ? window.parent.selectedFiles[argumentList.id] : argumentList.file_hash;
+
+							if (!selectedFileHashes || selectedFileHashes.length === 0) {
+								clearInterval(scrollToSelectedFilesInterval);
+								return false;
+							}
+
+							var $selectedFiles = $('#' + selectedFileHashes);
+
+							if ($selectedFiles.length === 0) {
+								clearInterval(scrollToSelectedFilesInterval);
+								return false;
+							}
+
+							$selectedFiles.each(function(index, selectedFile) {
+								$(selectedFile).click();
+								clearInterval(scrollToSelectedFilesInterval);
+							});
+						}, 500);
+					}
+				},
+				customData : {
+					csrf: csrf
+				}
+			},
+			managers: {
+				'elfinder': {}
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="elfinder"></div>
+</body>
+</html>

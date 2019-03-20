@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Stock;use UmiCms\System\Trade\iStock;use \iUmiObject as iDataObject;interface iFactory {const TYPE_GUID = 'emarket-store';public function create(iDataObject $v7beebf4251f2ace3d8e03527fe1bf86e);}

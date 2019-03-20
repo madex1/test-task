@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Currency;use UmiCms\System\Trade\Offer\Price\iCurrency;use UmiCms\System\Selector\iFactory as SelectorFactory;use UmiCms\System\Trade\Offer\Price\Currency\iFactory as CurrencyFactory;interface iRepository {public function __construct(CurrencyFactory $va5b5b780b305bb08bea9e1c0d0c8cc81, SelectorFactory $vdff401a605e5f6984373466cddee7287);public function get($vb80bb7740288fda1f201890375a60c8f);public function getAll();public function save(iCurrency $v1af0389838508d7016a9841eb6273962);}

@@ -1,0 +1,2 @@
+<?php
+ trait tUmiConstantMapInjector {private $v1d78dc8ed51214e518b5114fe24490ae;public function getMap() {if (!$this->map instanceof iUmiConstantMap) {throw new RequiredPropertyHasNoValueException('You should set iUmiConstantMap first');}return $this->map;}public function setMap(iUmiConstantMap $v38d705bca9b6b698e04f9796c20c2fd1) {$this->map = $v38d705bca9b6b698e04f9796c20c2fd1;}}

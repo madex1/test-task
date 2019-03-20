@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity;use \iXmlExporter as iBaseExporter;interface iExporter {public function __construct(iFacade $v00c169d5e8a598d3908199ef8c64c279, iSchema $vc9550d5fad73447fc24ba47f95d1c6b7);public function export(array $v5a2576254d428ddc22a03fac145c8749, iBaseExporter $ved780287e302ec3b9fd3c5e78771919f);public function getRelationMap(array $v689f9b0d90e82b15fbd75db891fc65b5, iBaseExporter $ved780287e302ec3b9fd3c5e78771919f);}

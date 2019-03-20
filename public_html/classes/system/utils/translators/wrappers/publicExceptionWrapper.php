@@ -1,0 +1,2 @@
+<?php
+ class publicExceptionWrapper extends translatorWrapper {public function translate($va8cfde6331bd59eb2ac96f8911c4b666) {return $this->translateData($va8cfde6331bd59eb2ac96f8911c4b666);}protected function translateData(publicException $v42552b1f133f9f8eb406d4f306ea9fd1) {return [    'error' => [     'node:msg' => def_module::parseTPLMacroses($v42552b1f133f9f8eb406d4f306ea9fd1->getMessage())    ]   ];}}

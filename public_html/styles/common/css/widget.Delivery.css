@@ -1,0 +1,260 @@
+/** Виджет выбора провайдера, тарифа и пункта выдачи доставки ApiShip */
+
+#apiShipWidget{
+    width:100%;
+    min-height:550px;
+}
+
+#apiShipWidget .d_tab_panel{
+    margin: 0;
+    padding: 0 !important;
+    min-height: 450px;
+    height: 450px;
+}
+
+#apiShipWidget .d_tab{
+    margin: 0;
+    padding: 0 !important;
+}
+
+#apiShipWidget div.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px  !important;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border: 1px solid #ddd;
+}
+
+
+#apiShipWidget div.accordion.active, div.accordion:hover {
+    background-color: #ddd;
+}
+
+
+#apiShipWidget div.accordion-panel {
+    background-color: white;
+    display: none;
+    border: 1px solid #ddd;
+}
+
+#apiShipWidget div.accordion-panel p{
+    padding: 5px 10px;
+}
+
+#apiShipWidget div.accordion-panel p input[type=radio],
+#apiShipWidget .filter p input[type=checkbox]{
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0 10px 2px 0;
+}
+
+#apiShipWidget div.accordion-panel.show {
+    display: block;
+}
+
+#apiShipWidget .accordion-panel label{
+    margin: 0 !important;
+}
+
+#apiShipWidget div.accordion:after {
+    content: '\02795';
+    font-size: 7px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+    border: 1px solid #777;
+    border-radius: 6px;
+    height: 10px;
+    line-height: 10px;
+    width: 11px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+#apiShipWidget div.accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#apiShipWidget div.d_tab_btn{
+    background: #ffffff none repeat scroll 0 0;
+    color: #00a0dc;
+    display: inline-block;
+    padding: 10px 20px !important;
+    cursor: pointer;
+    border: 3px solid #00a0dc;
+    font-weight:bold;
+}
+
+#apiShipWidget div.d_tab_btn.active{
+    background: #00a0dc;
+    color: #ffffff;
+}
+
+#apiShipWidget div.d_tp_wrapper{
+    background: #aaa;
+    display: block;
+    height: 450px !important;
+    width: 730px;
+    position: relative;
+    padding:0 !important;
+}
+
+#apiShipWidget div.d_tp_wrapper .map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 520px;
+    border: 1px solid #ddd;
+    height: 450px !important;
+    padding: 0;
+}
+
+#apiShipWidget div.d_tp_wrapper .list{
+    position: absolute;
+    top: 0;
+    left: 520px;
+    width: 210px;
+    background: #fff;
+    height: 450px !important;
+    overflow: auto;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-left: none;
+}
+
+#apiShipWidget div.d_tp_wrapper .list div.accordion{
+    width: auto;
+    padding: 10px 15px !important;
+}
+
+#apiShipWidget div.d_tp_wrapper .list .accordion_panel{
+    border: none;
+}
+
+#apiShipWidget .mCustomScrollBox, .mCSB_container{
+    padding: 0 !important;
+}
+
+#apiShipWidget .mCSB_inside > .mCSB_container{
+    margin-right: 0 !important;
+}
+
+#apiShipWidget .dp_pointlist li{
+    cursor: pointer;
+    padding: 0;
+}
+
+#apiShipWidget .dp_point_label:hover{
+    background: #d6e9f8;
+    color:  #767676;
+}
+
+#apiShipWidget .dp_btn{
+    cursor: pointer;
+}
+#apiShipWidget span.dp_point_label{
+    display: block;
+    padding: 5px 10px;
+}
+
+#apiShipWidget span.dp_point_label.active{
+    background: #d6e9f8;
+
+}
+
+#apiShipWidget span.dp_point_label.active:hover{
+    background: #d6e9f8;
+    color:  #333333;
+}
+
+#apiShipWidget span.dp_point_info{
+    display: none;
+    background: #d6e9f8;
+    padding: 5px 10px;
+}
+
+#apiShipWidget span.dp_point_info.show{
+    display: block;
+
+}
+
+#apiShipWidget span.dp_point_info.show p {
+    padding: 2px 0;
+}
+
+#apiShipWidget #toPoint .mCSB_outside + .mCSB_scrollTools{
+    right: -16px !important;
+}
+
+#apiShipWidget .filters{
+    padding: 10px;
+}
+
+#apiShipWidget .filters input[type="checkbox"] {
+    display:none;
+}
+#apiShipWidget .filters input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    background: none;
+    border-radius: 3px;
+    border: 1px solid #2d3847;
+    position: relative;
+}
+
+#apiShipWidget .filters input[type="checkbox"]:checked + label span{
+    background: #00a0dc;
+    border: 1px solid #00a0dc;
+}
+
+#apiShipWidget .filters input[type="checkbox"]:checked + label span:after {
+    content: '✔';
+    position: absolute;
+    top: 4px; left: 4px;
+    font-size: 12px;
+    line-height: 0.8;
+    color: #ffffff;
+    transition: all .2s;
+}
+
+#order_delivery_apiship .row.buttons{
+    margin-bottom: 15px;
+}
+
+#order_delivery_apiship .row.buttons .btn{
+    margin-left: 10px;
+}
+
+h2.sources-header {
+    margin-bottom: 15px;
+}
+
+h2.links-search-header {
+    margin-bottom: 15px;
+}
+
+ul.sources {
+    margin-left: 15px;
+}
+
+ul.sources li {
+    margin-bottom: 2px;
+}
+
+.providerSettingsField {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#apiShipWidget.fixfilters .filters{
+    padding: 0;
+}

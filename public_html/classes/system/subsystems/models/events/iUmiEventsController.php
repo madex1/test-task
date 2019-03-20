@@ -1,0 +1,2 @@
+<?php
+ interface iUmiEventsController {public function callEvent(iUmiEventPoint $v70e8822b2e035fa3777d666207aeafa8);public static function registerEventListener(iUmiEventListener $v09d7ec30552b0eded7e4bfad71fac83d);}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Import\UmiDump\Helper\File\Path;use UmiCms\System\Import\UmiDump\Helper\Solution\Postfix\iFilter as SolutionPostfixFilter;interface iConverter {public function __construct(\iConfiguration $vccd1066343c95877b75b79d47c36bebe, SolutionPostfixFilter $v66633b2bb147d80342c0a31c642b7f65);public function setSuffix($v4ec1b477cd0232b832c1899905ec51a4);public function convert($vd6fe1d0be6347b8ef2427fa629c04485);}

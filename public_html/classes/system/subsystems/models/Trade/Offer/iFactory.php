@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer;use UmiCms\System\Trade\iOffer;use UmiCms\System\Orm\Entity\iFactory as iAbstractFactory;interface iFactory extends iAbstractFactory {public function create();}

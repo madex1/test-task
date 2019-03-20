@@ -1,0 +1,2 @@
+<?php
+ trait tUmiDataBaseInjector {private $v4717d53ebfdfea8477f780ec66151dcb;public function getConnection() {if (!$this->connection instanceof IConnection) {throw new RequiredPropertyHasNoValueException('You should set IConnection first');}return $this->connection;}public function setConnection(IConnection $v4717d53ebfdfea8477f780ec66151dcb) {$this->connection = $v4717d53ebfdfea8477f780ec66151dcb;}}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Import\UmiDump\Demolisher;use UmiCms\System\Import\UmiDump\iDemolisher;interface iFileSystem extends iDemolisher {public function setRootPath($vd6fe1d0be6347b8ef2427fa629c04485);}

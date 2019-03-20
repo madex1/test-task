@@ -1,0 +1,144 @@
+body {
+	padding: 5px 5px;
+}
+
+div.eip_buttons {
+	padding-top: 5px;
+	text-align: right;
+}
+
+ul.tree-container {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+	position: relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+ul.tree-container, ul.ti-childs-container {
+	list-style: none;
+}
+
+ul.ti-childs-container {
+	margin: 0 0 0 19px;
+	padding: 0;
+}
+
+li.tree-highlight {
+	display: block;
+	height: 16px;
+	width: 100%;
+	background-color: #d0d7dd;
+}
+
+li.tree_toolbar {
+	width: 230px;
+	height: 20px;
+	right: 0;
+	padding-top: 2px;
+	background: #d0d7dd url('/images/cms/admin/mac/toolbar.gif') no-repeat 0 -1px;
+}
+
+a.tree_toolbtn {
+	display: block;
+	float: right;
+	margin-left: 10px;
+	width: 22px;
+	height: 16px;
+}
+
+img.ti-toggle {
+	border: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	width: 11px;
+	height: 11px;
+}
+
+li.ti {
+	padding: 0;
+	margin: 0;
+}
+
+.hover {
+	border-bottom: 1px dashed red;
+}
+
+img.ti-icon {
+	vertical-align: middle;
+	margin: 2px 5px;
+}
+
+div.ti {
+	display: block;
+	white-space: nowrap;
+	color: #3281CD;
+	font-family: Tahoma;
+	font-size: 11px;
+	text-decoration: none;
+	height: 22px;
+	/*background-color: #fff;*/
+}
+
+div.hightlight {
+	background-color: #D0D7DD !important;
+}
+
+div.virtual-hightlight {
+	background-color: #C8EFFF !important;
+}
+
+div.ti-drop {
+	height: 2px;
+	overflow: hidden;
+}
+
+div.ti-drop-as-child {
+	height: 2px;
+	margin-left: 42px;
+	background: transparent;
+	overflow: hidden;
+}
+
+div.ti-drop-as-sibling {
+	height: 2px;
+	background: #00008b;
+	overflow: hidden;
+}
+
+div.ti-draggable {
+	height: 21px;
+	cursor: move;
+}
+
+div.ti-draggable div {
+	margin-left: 20px;
+	padding-top: 5px;
+}
+
+a.ti:active, a.ti:focus {
+	/*background-color: #d0d7dd;*/
+}
+
+/* indicators */
+.page-status {
+	width: 7px;
+	height: 7px;
+	z-index: 2;
+	margin-top: 8px;
+	margin-left: -20px;
+	position: absolute;
+	_position: none;
+}
+
+/* Local styles */
+div.tree-wrapper {
+	border-bottom: 1px solid #ccc;
+	/*border-top    : 1px solid #ccc;*/
+	/*border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;*/
+	height: 240px;
+	overflow: auto;
+	position: relative;
+}

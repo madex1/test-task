@@ -1,0 +1,2 @@
+<?php
+ use UmiCms\System\Request\iFacade;interface iSystemInfo {const ALL = -1;const SYSTEM = 1;const PHP = 2;const DATABASE = 4;const NETWORK = 8;const STAT = 16;const MODULES = 32;const LICENSE = 64;const PHP_INFO = 128;public function __construct(   iRegedit $va9205dcfd4a6f7c2cbe8be01566ff84a, IConnection $v4717d53ebfdfea8477f780ec66151dcb, iDomainsCollection $v0d771fa031fb27561ed207afa6cf9983, iFacade $v10573b873d2fa5a365d558a45e328e47  );public function getInfo($vef3e30e070f70244fd6578d88a6b77ac = 1);}

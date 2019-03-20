@@ -1,0 +1,2 @@
+<?php
+ class DecompressDirectoryAction extends Action {public function execute() {$v3d0bb1b55e6e399b5a178a7d2ce1e93e = $this->getParam('archive-filepath');$v207e5b7e7d2b07f6b19066e8d62f4b1d = $this->getParam('target-directory');$vadcdbd79a8d84175c229b192aadc02f2 = new UmiZipArchive($v3d0bb1b55e6e399b5a178a7d2ce1e93e);$result = $vadcdbd79a8d84175c229b192aadc02f2->extract($v207e5b7e7d2b07f6b19066e8d62f4b1d);if ($result == 0) {throw new Exception('Failed to create zip file: "' . $vadcdbd79a8d84175c229b192aadc02f2->errorInfo() . '"');}}public function rollback() {}}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Import;trait tSourceIdBinderInjector {private $vb508148712cb53958c7e3d25ec86d72a;public function setSourceIdBinder(\iUmiImportRelations $vb508148712cb53958c7e3d25ec86d72a) {$this->sourceIdBinder = $vb508148712cb53958c7e3d25ec86d72a;return $this;}public function getSourceIdBinder() {if (!$this->sourceIdBinder instanceof \iUmiImportRelations) {throw new \RequiredPropertyHasNoValueException('You should inject \iUmiImportRelations first');}return $this->sourceIdBinder;}}

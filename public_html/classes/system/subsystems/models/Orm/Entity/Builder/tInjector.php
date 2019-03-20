@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Builder;use UmiCms\System\Orm\Entity\iBuilder;trait tInjector {private $vc87a8ca60f0891b79d192fa86f019916;protected function getBuilder() {return $this->builder;}protected function setBuilder(iBuilder $vc87a8ca60f0891b79d192fa86f019916) {$this->builder = $vc87a8ca60f0891b79d192fa86f019916;return $this;}}

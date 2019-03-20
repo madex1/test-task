@@ -1,0 +1,2 @@
+<?php
+ trait tUmiConfigInjector {private $vccd1066343c95877b75b79d47c36bebe;public function setConfiguration(iConfiguration $vccd1066343c95877b75b79d47c36bebe) {$this->configuration = $vccd1066343c95877b75b79d47c36bebe;}public function getConfiguration() {if (!$this->configuration instanceof iConfiguration) {throw new RequiredPropertyHasNoValueException('You should set iConfiguration first');}return $this->configuration;}}

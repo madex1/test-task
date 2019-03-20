@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Api\Http\Xml;use Guzzle\Http\Message\Response;use UmiCms\Classes\System\Utils\Api\Http\Client as HttpClient;abstract class Client extends HttpClient {protected function getDefaultHeaders() {return [    'Accept' => 'text/xml',    'Content-Type' => 'text/xml; charset=utf-8'   ];}protected function getResponseBody(Response $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe) {return $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe->xml();}}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Currency\Favorite;use UmiCms\System\Cookies\iCookieJar;use UmiCms\System\Trade\Offer\Price\Currency\iFavorite as iAbstractFavorite;interface iCustomer extends iAbstractFavorite {const COOKIE_NAME = 'customer_currency';public function __construct(iCookieJar $v3952212ff477ba2f5b443a38a081fecb);}

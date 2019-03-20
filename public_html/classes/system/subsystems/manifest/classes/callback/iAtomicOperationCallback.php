@@ -1,0 +1,2 @@
+<?php
+ interface iAtomicOperationCallback {public function onBeforeExecute(iAtomicOperation $vf7235a61fdc3adc78d866fd8085d44db);public function onAfterExecute(iAtomicOperation $vf7235a61fdc3adc78d866fd8085d44db);public function onBeforeRollback(iAtomicOperation $vf7235a61fdc3adc78d866fd8085d44db);public function onAfterRollback(iAtomicOperation $vf7235a61fdc3adc78d866fd8085d44db);public function onException(iAtomicOperation $vf7235a61fdc3adc78d866fd8085d44db, Exception $v42552b1f133f9f8eb406d4f306ea9fd1);public function getLog();}

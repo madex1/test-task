@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\I18n;interface iI18nFilesLoader {public function __construct(array $v20cf12be6809c539cfed17c272627718, $v535d02e594853266d2db02ff178dd7f7);public function loadLangConstants();public function setTemplatePath($vd6fe1d0be6347b8ef2427fa629c04485);public function getLoadedConstants();}

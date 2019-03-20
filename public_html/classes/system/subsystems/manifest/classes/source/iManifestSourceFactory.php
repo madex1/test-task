@@ -1,0 +1,2 @@
+<?php
+ interface iManifestSourceFactory {const CORE = 1;const MODULE = 2;const SOLUTION = 3;public function create($v599dcce2998a6b40b1e38e8c6006cb0a = self::CORE, $vb068931cc450442b63f5b3d276ea4297 = null);}

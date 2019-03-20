@@ -1,0 +1,2 @@
+<?php
+ class DeleteFilesAction extends Action {public function execute() {$vd6fe1d0be6347b8ef2427fa629c04485 = $this->getParam('target-directory');$v240bf022e685b0ee30ad9fe9e1fb5d5b = $this->getParam('pattern');$v5f8f22b8cdbaeee8cf857673a9b6ba20 = new umiDirectory($vd6fe1d0be6347b8ef2427fa629c04485);$v5f8f22b8cdbaeee8cf857673a9b6ba20->deleteFilesByPattern($v240bf022e685b0ee30ad9fe9e1fb5d5b);}public function rollback() {}}

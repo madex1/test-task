@@ -1,0 +1,24 @@
+<div class="eip_win_head popupHeader">
+    {%if closeButton%}
+        <div class="eip_win_close popupClose" id="close-button">&#160;</div>
+    {%/if%}
+    <div class="eip_win_title" title="{%= title %}">{%= title %}</div>
+</div>
+
+<div class="eip_win_body popupBody">
+    <div class="popupText">{%= text %}{%html html %}</div>
+
+    {%if buttons%}
+        <div class="eip_buttons">
+            {%if confirmButton%}
+            <input type="button" class="primary ok" id="confirm-button" value="{%= confirmText %}" />
+            {%/if%}
+            {%if cancelButton%}
+                <input type="button" class="back" id="cancel-button" value="{%= cancelText %}" />
+            {%/if%}
+            <div style="clear: both;"></div>
+        </div>
+    {%/if%}
+
+</div>
+

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="indexing">
+<head>
+    <meta charset="UTF-8">
+    <title>Индексация</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/styles/skins/modern/design/css/main.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        #start {
+            float: right;
+        }
+        #stop {
+            float: left;
+        }
+        body {
+            background: none;
+        }
+        .indexing h3{
+            margin-top: 0;
+            font-family: "Segoe UI", Arial, Tahoma;
+        }
+        .log {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        .buttons {
+            text-align: center;
+        }
+
+        html.indexing, html.indexing body {
+            min-width: 100px;
+        }
+
+        html.indexing {
+            margin: 17px 0 0 40px;
+            overflow: hidden;
+        }
+
+		textarea {
+			resize: none;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="main_part">
+            <div class="indexing">
+                <h3>Всё готово для запуска индексации</h3>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                         style="width:0">
+                    </div>
+                </div>
+            </div>
+            <div class="log">
+                <label for="logs">Статус индексации:</label>
+                <textarea disabled rows="5" id="logs" readonly></textarea>
+            </div>
+            <div class="buttons">
+                <button class="btn color-blue" id="stop" disabled>
+                    Остановить
+                </button>
+                <button class="btn color-blue" id="ok" style="display:none">
+                    OK
+                </button>
+                <button class="btn color-blue" id="start">
+                    Запустить
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        jQuery(document).ready(function() {
+
+            var csrf = window.parent.csrfProtection;
+            jQuery.ajaxSetup({
+                beforeSend: function(jqXHR, settings) {
+                    if (settings.type == 'POST' && settings.data) {
+                        var data = settings.data.match(/csrf=([^&]*)/);
+                        if (!data) { // Добавляем
+                            settings.data += '&csrf=' + csrf.token;
+                        } else if (data[1] == '') { // Заменяем
+                            settings.data = settings.data.replace(/csrf=[^&]*/, 'csrf=' + csrf.token);
+                        }
+                    }
+                }
+            });
+
+            var indexCategory = new Indexing();
+
+            jQuery('#start').click(function() {
+                indexCategory.initProgress();
+                indexCategory.changeHeader('Производится индексация...');
+                indexCategory.enableButton(indexCategory.stopButton);
+                indexCategory.disableButton(indexCategory.startButton);
+                indexCategory.startIndexing();
+            });
+            jQuery('#stop').click(function() {
+                indexCategory.stopProgress();
+                indexCategory.enableButton(indexCategory.startButton);
+                indexCategory.disableButton(indexCategory.stopButton);
+                indexCategory.changeHeader('Индексация остановлена');
+                indexCategory.stopIndexing();
+            });
+            jQuery('#ok', '.buttons').click(function() {
+                window.parent.$.closePopupLayer();
+            });
+        });
+
+        function Indexing() {
+            this.progressBar = jQuery('.indexing .progress .progress-bar');
+            this.header = jQuery('.indexing h3');
+            this.startButton = jQuery('.buttons button#start');
+            this.stopButton = jQuery('.buttons button#stop');
+            this.logsContainer = jQuery('#logs');
+            this._stopped = true;
+
+            var args = getArgs();
+
+            this.settings = {
+                categoryId: args.categoryId,
+                level: args.level
+            };
+
+            function getArgs() {
+                var args = new Object();
+                var query = location.search.substring(1);
+                var pairs = query.split("&");
+                for(var i = 0; i < pairs.length; i++) {
+                    var pos = pairs[i].indexOf('=');
+                    if (pos == -1) continue;
+                    var argname = pairs[i].substring(0,pos);
+                    var value = pairs[i].substring(pos+1);
+                    args[argname] = unescape(value);
+                }
+                return args;
+            }
+        }
+
+        Indexing.prototype.initProgress = function() {
+            this.progressBar.attr('style', 'width: 100%');
+        };
+        Indexing.prototype.stopProgress = function() {
+            this.progressBar.attr('style', 'width: 0%');
+        };
+
+        Indexing.prototype.changeHeader = function(newHeader) {
+            this.header.text(newHeader);
+        };
+
+        Indexing.prototype.enableButton = function(button) {
+            button.removeAttr('disabled');
+        };
+        Indexing.prototype.disableButton = function(button) {
+            button.attr('disabled', '');
+        };
+
+        Indexing.prototype.hideButton = function(button) {
+            button.hide();
+        };
+
+        Indexing.prototype.writeSuccess = function() {
+            var mainWindow = window.parent;
+            var controller = mainWindow.AdminIndexing.Controller;
+            var settings = mainWindow.AdminIndexing.Settings;
+            var categoryId = this.settings.categoryId;
+            var storage = window.localStorage;
+            var successValue = '1';
+
+            storage.setItem(settings.module.storage.success, successValue);
+
+            controller.setValue(
+                    categoryId, settings.fields.indexState.name, settings.fields.indexState.doneValue,
+                    function() {
+                        controller.setValue(
+                                categoryId, settings.fields.indexDate.name, Math.floor(Date.now() / 1000),
+                                function() {
+
+                                }
+                        );
+                    }
+            )
+        };
+
+        Indexing.prototype.startIndexing = function() {
+            var self = this;
+            self._stopped = false;
+
+            makeIndexRequest({
+                param0: self.settings.categoryId,
+                param1: self.settings.level
+            });
+
+            function makeIndexRequest(data) {
+                var currentLang = window.parent.uAdmin.data.lang || 'ru';
+
+                jQuery.ajax({
+                    url: '/' + currentLang + '/admin/udata://catalog/indexPosition/.json',
+                    data: data,
+                    dataType: 'json',
+                    type: 'post',
+                    success: function(response) {
+                        if (response.data && response.data.index && response.data.index.error.length === 0) {
+
+                            if (!response.data.index.isDone) {
+                                self.writeLog(null, response);
+
+                                if (!self.isStopped()) {
+                                    makeIndexRequest(data);
+                                }
+
+                            } else {
+                                self.finishIndexing();
+                            }
+                        } else {
+                            self.disableButton(self.stopButton);
+                            self.enableButton(self.startButton);
+                            self.stopProgress();
+                            self.writeLog(null, response);
+                        }
+
+                    },
+                    error: function(response) {
+                        self.disableButton(self.stopButton);
+                        self.enableButton(self.startButton);
+                        self.stopProgress();
+                        self.writeLog(null, response);
+                    }
+                });
+            }
+        };
+
+        Indexing.prototype.finishIndexing = function() {
+            this.hideButton(this.startButton);
+            this.hideButton(this.stopButton);
+            $('#ok', '.buttons').show();
+            this.writeLog('Индексация завершена успешно.');
+            this.changeHeader('Индексация завершена');
+            this.writeSuccess();
+        };
+
+        Indexing.prototype.isStopped = function() {
+            return this._stopped;
+        };
+
+        Indexing.prototype.stopIndexing = function() {
+            this._stopped = true;
+        };
+
+        Indexing.prototype.writeLog = function(message, response) {
+            var self = this;
+
+            if (typeof message === 'string' && message.length > 0) {
+                appendRow(this.logsContainer, message);
+            } else {
+                appendRow(this.logsContainer, getMessage(response));
+            }
+
+
+            function appendRow(element, row) {
+                var now = new Date();
+                var time = now.getHours() + ':' + ((now.getMinutes() < 10 ? '0' : '') + now.getMinutes());
+                element.val('[' + time + '] ' + row + '\n' + element.val());
+            }
+
+            function getMessage(response) {
+                var category =  {
+                    id: self.settings.categoryId,
+                    level: self.settings.level,
+                    name: '(Без названия)'
+                };
+                var table = window.parent.oTable;
+                var message = '';
+                var unexpectedError = 'Возникла непредвиденная ошибка ' +
+                                      '(данные отсутствуют).';
+                var indexedCount = 0;
+
+                if (typeof table.getItem(category.id).name === 'string' && table.getItem(category.id).name.length > 0) {
+                    category.name = table.getItem(category.id).name;
+                }
+
+                if (typeof response.data === 'undefined') {
+
+                    message = unexpectedError;
+                    return message;
+                }
+
+                if (typeof response.data.error === 'string' && response.data.error.length > 0) {
+                    message = 'Возникла ошибка: ' + response.data.error;
+                    return message;
+                }
+
+                if (typeof response.data.index !== 'undefined' && typeof response.data.index.error === 'string' &&
+                    response.data.index.error.length > 0) {
+
+                    message = response.data.index.error;
+                    return message;
+                }
+
+                if (typeof response.data.index.indexed !== 'undefined') {
+                    indexedCount = parseInt(response.data.index.indexed);
+
+                    if (!isNaN(indexedCount)) {
+                        message = 'Проиндексировано: ' + indexedCount + ' запис' +
+                                  getWordEnding(indexedCount) + '.';
+
+                        return message;
+                    }
+
+                }
+
+                function getWordEnding(count) {
+                    var ending = '';
+
+                    if (count === 1) {
+                        ending = 'ь';
+                    } else if (count >= 2 && count <= 4) {
+                        ending = 'и';
+                    } else {
+                        ending = 'ей';
+                    }
+
+                    return ending;
+                }
+            }
+
+        };
+    </script>
+</body>
+</html>

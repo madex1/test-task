@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity;use UmiCms\System\Orm\iEntity;use UmiCms\System\Import\UmiDump\Entity\iBaseImporter;interface iImporter {public function __construct(iFacade $v00c169d5e8a598d3908199ef8c64c279, iSchema $vc9550d5fad73447fc24ba47f95d1c6b7);public function import(array $v6dd047148d685270458ecc44ee128a4d, iBaseImporter $vd7648ce30cce00f43e53cae171ed8d84);public function getRelationMap(array $ve7143c35e910d05210552bcc5b236bc8, iBaseImporter $vd7648ce30cce00f43e53cae171ed8d84);}

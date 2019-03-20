@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Composite;use UmiCms\System\Orm\Entity\iBuilder;use UmiCms\System\Orm\iEntity as iAbstractEntity;interface iEntity extends iAbstractEntity {public function __construct(iBuilder $vc87a8ca60f0891b79d192fa86f019916);public function loadAllRelations();public function loadRelation($vb068931cc450442b63f5b3d276ea4297);}

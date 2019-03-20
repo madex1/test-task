@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Hierarchy\Domain;use UmiCms\System\Request\Http\iRequest;interface iDetector {public function __construct(\iDomainsCollection $v0d771fa031fb27561ed207afa6cf9983, iRequest $v6077efae9efff6a52314c120a5048f03);public function detect();public function detectId();public function detectHost();public function detectUrl();}

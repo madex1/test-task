@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Data\Object\Type\Hierarchy\Relation;use UmiCms\System\Data\Object\Type\Hierarchy\iRelation;interface iFactory {public function create(array $v8d777f385d3dfec8815d20f7496026dc);}

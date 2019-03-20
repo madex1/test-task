@@ -1,0 +1,2 @@
+<?php
+ trait tUmiImageFileInjector {private $v3d5edcdcec5523df4c58f4480aa27958;public function getImageFileHandler() {if (!$this->imageFileHandler instanceof \iUmiImageFile) {throw new Exception('You should set iUmiImageFile first');}return $this->imageFileHandler;}public function setImageFileHandler(\iUmiImageFile $v3d5edcdcec5523df4c58f4480aa27958) {$this->imageFileHandler = $v3d5edcdcec5523df4c58f4480aa27958;return $this;}}

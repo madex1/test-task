@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System;interface iMailNotification extends \iUmiCollectionItem {public function getLangId();public function setLangId($vb80bb7740288fda1f201890375a60c8f);public function getDomainId();public function setDomainId($vb80bb7740288fda1f201890375a60c8f);public function getName();public function setName($vb068931cc450442b63f5b3d276ea4297);public function getModule();public function setModule($v22884db148f0ffb0d830ba431102b0b5);public function getTemplates();public function getTemplateByName($vb068931cc450442b63f5b3d276ea4297);}

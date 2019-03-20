@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity;use UmiCms\System\Import\UmiDump\Helper\Entity\iSourceIdBinder;interface iDemolisher {public function __construct(iFacade $v00c169d5e8a598d3908199ef8c64c279, iSchema $vc9550d5fad73447fc24ba47f95d1c6b7);public function demolishList($ve7143c35e910d05210552bcc5b236bc8, iSourceIdBinder $vb508148712cb53958c7e3d25ec86d72a);public function demolish($v32a9d3c9a4b1449499e182e90d04fcc9, iSourceIdBinder $vb508148712cb53958c7e3d25ec86d72a);}

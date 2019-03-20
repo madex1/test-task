@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Utils\Logger;use UmiCms\Classes\System\Entities\Directory\iFactory as DirectoryFactory;interface iFactory {public function __construct(DirectoryFactory $vb7a82c37d8c13db7202ec4890aa47a7d);public function create($v06f0066e65410a0a1c9f39991a3f3b01);}

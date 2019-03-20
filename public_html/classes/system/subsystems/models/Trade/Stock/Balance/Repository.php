@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Stock\Balance;use UmiCms\System\Trade\Stock\iBalance;use UmiCms\System\Orm\Entity\Repository as AbstractRepository;class Repository extends AbstractRepository implements iRepository {protected function isValidEntity($vf5e638cc78dd325906c1298a0c21fb6b) {return $vf5e638cc78dd325906c1298a0c21fb6b instanceof iBalance;}}

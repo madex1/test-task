@@ -1,0 +1,17 @@
+<script src="/ulang/ru/common/content/date/exchange?js"></script>
+<script>
+        if (typeof document.querySelector == 'function' && typeof window.getLabel == 'function') {
+            document.querySelector('#quick_csv_encoding label span').innerHTML = getLabel('js-csv-choose-encoding');
+        }
+</script>
+
+<form id="quick_csv_encoding">
+    <label id="csv_encoding">
+        <span>Выберите кодировку:</span>
+        <select name="encoding">
+            <option value="Windows-1251">Windows-1251</option>
+            <option value="UTF-8">UTF-8</option>
+        </select>
+    </label>
+
+</form>

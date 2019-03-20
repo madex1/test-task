@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Captcha\Strategies;class NullCaptcha extends CaptchaStrategy {public function generate($v66f6181bcb4cff4cd38fbc804a036db6, $v56d72c4d5259a6034a152e6c02cd754c, $vf66412bef9a4d9ac818c3141160250bd, $v123c50dcaa827353e19cd0140ab2c896) {return '';}public function isValid() {return true;}public function isRequired() {return false;}public function getName() {return 'null-captcha';}}

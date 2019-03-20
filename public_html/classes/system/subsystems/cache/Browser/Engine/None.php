@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache\Browser\Engine;use UmiCms\System\Cache\Browser\Engine;class None extends Engine {public function process() {$v7f2db423a49b305459147332fb01cf87 = $this->getResponse()    ->getCurrentBuffer();$v7f2db423a49b305459147332fb01cf87->setHeader('Cache-Control', $this->getCacheControl());$v7f2db423a49b305459147332fb01cf87->setHeader('Pragma', $this->getPragma());}protected function getCacheControl() {return sprintf('%s, no-cache, must-revalidate, max-age=0', $this->getCacheControlPrivacy());}protected function getPragma() {return 'no-cache';}}

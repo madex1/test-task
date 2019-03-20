@@ -1,0 +1,2 @@
+<?php
+ interface iServiceContainerFactory {const DEFAULT_CONTAINER_TYPE = 'default';public static function create($v599dcce2998a6b40b1e38e8c6006cb0a = self::DEFAULT_CONTAINER_TYPE, array $va4f86f7bfc24194b276c22e0ef158197 = [], array $v166e64f6c3677d0c513901242a3e702d = []);}

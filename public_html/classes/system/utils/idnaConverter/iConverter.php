@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Idn;interface iConverter {public function decode($va43c1b0aa53a0c908810c06ab1ff3967, $v84bea1f0fd2ce16f7e562a9f06ef03d3 = false);public function encode($va43c1b0aa53a0c908810c06ab1ff3967, $v84bea1f0fd2ce16f7e562a9f06ef03d3 = false);public function convert($va43c1b0aa53a0c908810c06ab1ff3967);}

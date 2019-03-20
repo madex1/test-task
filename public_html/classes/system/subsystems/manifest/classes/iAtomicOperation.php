@@ -1,0 +1,2 @@
+<?php
+ interface iAtomicOperation {public function getName();public function execute();public function rollback();public function setCallback(iAtomicOperationCallback $v924a8ceeac17f54d3be3f8cdf1c04eb2);}

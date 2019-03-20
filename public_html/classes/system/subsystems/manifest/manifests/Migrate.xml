@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<route>
+		<transaction name="MigrateObjectType">
+			<action name="UmiCms\Manifest\Migrate\Object\Type\Hierarchy\TruncateRelationTable" />
+			<action name="UmiCms\Manifest\Migrate\Object\Type\Hierarchy\FillRelationTable" />
+		</transaction>
+		<transaction name="MigrateDomainIdFields">
+			<action name="UmiCms\Manifest\Migrate\Field\ChangeType">
+				<param name="target" value='[{"type-guid":"emarket-mobile-devices","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"emarket-order","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"social_networks-network","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"social_networks-network-vkontakte","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"root-settings-type","field":"domain_id","from":"int","to":"domain_id"}]' />
+			</action>
+			<action name="UmiCms\Manifest\Migrate\Field\MoveValue">
+				<param name="target" value='[{"type-guid":"emarket-mobile-devices","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"emarket-order","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"social_networks-network","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"social_networks-network-vkontakte","field":"domain_id","from":"int","to":"domain_id"},{"type-guid":"root-settings-type","field":"domain_id","from":"int","to":"domain_id"}]' />
+			</action>
+		</transaction>
+		<transaction name="MigrateImgFileFields">
+			<action name="UmiCms\Manifest\Migrate\Field\MoveImageValues"/>
+		</transaction>
+	</route>
+</manifest>

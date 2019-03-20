@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<route>
+		<transaction name="update_order_domain_ids_on_install">
+			<action name="\UmiCms\Manifest\Emarket\UpdateOrderDomainIds" />
+		</transaction>
+	</route>
+</manifest>

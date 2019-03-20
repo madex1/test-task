@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="sliderEditor.css" type="text/css" media="screen"/>
+
+	<script>
+		// для uAdmin.js
+		window.pageData = window.parent.pageData;
+	</script>
+
+	<script src="/js/cms/jquery.compiled.js?81384" charset="utf-8"></script>
+	<script src="sliderEditor.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<form enctype="multipart/form-data" method="post" style="display:none;">
+		<input type="file" name="eip-ieditor-upload-fileinput[]" id='uploadimage'>
+	</form>
+	<nav>
+        <div class="tab template">
+			<label data-key="js-label-new"></label>
+			<span class="tab-number"></span>
+			<span class="icon"></span>
+		</div>
+		<div class="tab new">
+			<span class="icon"></span>
+		</div>
+        <div class="tab tab-nav prev">
+			<span class="icon"></span>
+		</div>
+        <div class="tab tab-nav next">
+			<span class="icon"></span>
+		</div>
+	</nav>
+	<div class="slide template">
+		<input data-id="id" type="hidden"/>
+		<input data-id="slider_id" type="hidden"/>
+		<div class="imageEditor">
+			<div class="fileBrowserButton">
+				<span class="icon"></span>
+				<label data-key="js-label-select-from-uploaded"></label>
+			</div>
+			<div class="uploadButton">
+				<span class="icon"></span>
+				<label data-key="js-label-upload-from-pc"></label>
+			</div>
+			<img data-id="image" src="emptyImage.png" class="empty"/>
+		</div>
+		<div class="row">
+			<div class="half">
+				<div class="title-slidereditor left-block">
+					<label data-key="js-label-sliders-field-name"></label>*
+				</div>
+				<textarea data-id="name" class="textarea-slidereditor left-block"></textarea>
+			</div>
+			<div class="half">
+				<div class="title-slidereditor right-block">
+					<label data-key="js-label-sliders-field-title"></label>
+				</div>
+				<textarea data-id="title" class="textarea-slidereditor right-block"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="full">
+				<div class="title-slidereditor">
+					<label data-key="js-label-sliders-field-text"></label>
+				</div>
+				<textarea data-id="text"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="full">
+				<div class="title-slidereditor">
+					<label data-key="js-label-sliders-field-link"></label>
+				</div>
+				<input data-id="link"/>
+				<img src="/images/cms/admin/mac/tree.png" height="18" class="treeButton">
+			</div>
+		</div>
+	</div>
+	<div class="slide buttons">
+		<div class="row buttons">
+			<div class="full">
+				<span class="button save-button">
+					<span class="icon"></span>
+					<label data-key="js-label-save"></label>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

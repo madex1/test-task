@@ -1,0 +1,2 @@
+<?php
+ interface iUmiEntinty {public static function filterInputString($vb45cffe084dd3d20d928bee85e7b0f21);public function getId();public function commit();public function update();public function getIsUpdated();public function setIsUpdated($v8de61324edc43f3acb1b73da3c63e89e = true);public function getStoreType();public function translateLabel($vd304ba20e96d87411588eeabac850e34);public function setSavingInDestructor($v327a6c4304ad5938eaf0efb6cc3e53dc = true);}

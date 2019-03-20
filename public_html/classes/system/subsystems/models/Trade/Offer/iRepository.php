@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer;use UmiCms\System\Orm\iEntity;use UmiCms\System\Trade\iOffer;use UmiCms\System\Orm\Entity\iRepository as iAbstractRepository;interface iRepository extends iAbstractRepository {public function get($vb80bb7740288fda1f201890375a60c8f);public function getListBy($v06e3d36fa30cea095545139854ad1fb9, $v2063c1608d6e0baf80249c42e2be5804);public function save(iEntity $vd60db28d94d538bbb249dcc7f2273ab1);public function delete($vb80bb7740288fda1f201890375a60c8f);public function clear();}

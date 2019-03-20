@@ -1,0 +1,2 @@
+<?php
+ class CoreManifestSource implements iManifestSource {public function getConfigFilePath($vb068931cc450442b63f5b3d276ea4297) {return SYS_KERNEL_PATH . "subsystems/manifest/manifests/{$vb068931cc450442b63f5b3d276ea4297}.xml";}public function getActionFilePath($vb068931cc450442b63f5b3d276ea4297) {$vb068931cc450442b63f5b3d276ea4297 = trimNameSpace($vb068931cc450442b63f5b3d276ea4297);return SYS_KERNEL_PATH . "subsystems/manifest/actions/{$vb068931cc450442b63f5b3d276ea4297}.php";}}

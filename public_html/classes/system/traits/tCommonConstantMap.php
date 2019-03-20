@@ -1,0 +1,2 @@
+<?php
+ trait tCommonConstantMap {private $v93fb40ec02c008121fa9199899b31202;public function __construct() {$v3dc028fff398aee22fcde8526b0e2bb4 = new ReflectionClass(get_class($this));$this->constants = $v3dc028fff398aee22fcde8526b0e2bb4->getConstants();}public function get($v617ac08757d38a5a7ed91c224f0e90a0) {if (isset($this->constants[$v617ac08757d38a5a7ed91c224f0e90a0])) {return $this->constants[$v617ac08757d38a5a7ed91c224f0e90a0];}return null;}}

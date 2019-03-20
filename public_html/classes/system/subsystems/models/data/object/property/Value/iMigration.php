@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Data\Object\Property\Value;use UmiCms\System\Data\Object\Property\Value\Table\iSchema;interface iMigration {public function __construct(iSchema $vc9550d5fad73447fc24ba47f95d1c6b7, \IConnection $v4717d53ebfdfea8477f780ec66151dcb);public function migrate(\iUmiObjectProperty $v1a8db4c996d8ed8289da5f957879ab94, $v99ac724d387523f1349bf0bdeef6eb44);public function rollback(\iUmiObjectProperty $v1a8db4c996d8ed8289da5f957879ab94, $v99ac724d387523f1349bf0bdeef6eb44);}

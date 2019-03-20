@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache\State;use UmiCms\System\Auth\iAuth;use UmiCms\System\Request\iFacade as iRequest;use UmiCms\System\Response\iFacade as iResponse;interface iValidator {public function __construct(   iAuth $vfa53b91ccc1b78668d5af58e1ed3a485,   iRequest $v10573b873d2fa5a365d558a45e328e47,   \iCmsController $v8b1dc169bf460ee884fceef66c6607d6,   iResponse $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe  );public function isValid();}

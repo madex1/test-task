@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<route>
+		<transaction name="site_map_indexing_on_install">
+			<action name="\UmiCms\Manifest\Seo\DeleteIndex" />
+			<action name="\UmiCms\Manifest\Seo\SiteMapIndexing">
+				<param name="limit" value="15" />
+			</action>
+		</transaction>
+	</route>
+</manifest>

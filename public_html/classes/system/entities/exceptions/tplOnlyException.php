@@ -1,0 +1,2 @@
+<?php
+ class tplOnlyException extends publicException {public function __construct($v78e731027d8fd50ed642340b7c9a63b3 = '', $vc13367945d5d4c91047b3b50234aa7ab = 0, $v990212f8ef70507a61ec72b2ae25732a = '') {parent::__construct(getLabel('error-only-tpl-method'));}}

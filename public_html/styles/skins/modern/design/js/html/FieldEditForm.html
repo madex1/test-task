@@ -1,0 +1,26 @@
+<div class="field-form-wrapper"></div>
+<script id="field-form" type="text/template">
+	<% _.each(fieldList, function(field) { %>
+		<% if (field.type == "input") { %>
+		<div class="group-block">
+			<div class="title-edit" ><%= field.label %></div>
+			<input type="text" class="default" id="<%= field.id %>" name="data[<%= field.name %>]" value="<%= field.value %>" />
+		</div>
+		<% } else if (field.type == "select") { %>
+		<div class="group-block">
+			<div class="title-edit" ><%= field.label %></div>
+			<select id="<%= field.id %>" name="data[<%= field.name %>]"></select>
+		</div>
+		<% } else if (field.type == "checkbox") { %>
+		<% var checked = field.value ? 'checked' : ''; %>
+		<div class="option-block">
+			<label>
+				<div class="checkbox <%= checked %>">
+					<input type="checkbox" id="<%= field.id %>" name="data[<%= field.name %>]" value="1" class="checkbox" <%= checked %> />
+				</div>
+				<span class="field-option-title"><%= field.label %></span>
+			</label>
+		</div>
+		<% } %>
+	<% }); %>
+</script>

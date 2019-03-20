@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Type\Attribute;use UmiCms\System\Orm\Entity\iMutator;use UmiCms\System\Orm\Entity\Attribute\Mutator as AbstractMutator;class Mutator extends AbstractMutator implements iMutator {}

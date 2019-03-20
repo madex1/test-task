@@ -1,0 +1,5 @@
+<?php
+ use UmiCms\Service;class JsonAtomicOperationCallback extends CommonAtomicOperationCallback {protected $buffer;public function __construct() {$this->buffer = Service::Response()    ->getCurrentBuffer();}public function getLog() {return explode(PHP_EOL, $this->buffer->content());}protected function log($v78e731027d8fd50ed642340b7c9a63b3, $v81ae42f244763331c3caaced7f5a1dc0 = false) {$vd98a07f84921b24ee30f86fd8cd85c3c = ["'", "\n"];$v01b6e20344b68835c5ed1ddedf20d531 = ["\\'", "\\n"];$v78e731027d8fd50ed642340b7c9a63b3 = str_replace($vd98a07f84921b24ee30f86fd8cd85c3c, $v01b6e20344b68835c5ed1ddedf20d531, $v78e731027d8fd50ed642340b7c9a63b3);$v64210891baca9632389de57f28f5f766 = $v81ae42f244763331c3caaced7f5a1dc0 ? 'reportJsonError' : 'reportJsonStatus';$vdc1d71bbb5c4d2a5e936db79ef10c19f = <<<JS
+{$v64210891baca9632389de57f28f5f766}('{$v78e731027d8fd50ed642340b7c9a63b3}');
+
+JS;   $this->buffer->push($vdc1d71bbb5c4d2a5e936db79ef10c19f);}}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Уровень вложенности индексации</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/styles/skins/modern/design/css/main.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        #level {
+            width: 100px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .container {
+            width: 92%;
+            margin: 10px auto 0 auto;
+        }
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="level">Уровень вложенности:</label>
+                <input type="text" value="1" maxlength="10" class="default" placeholder="Уровень" id="level" >
+                <a class="btn color-blue" id="apply">Применить</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(document).ready(function() {
+            var levelInput = jQuery('#level');
+            levelInput.focus();
+
+            jQuery('#apply').click(function() {
+                var value = levelInput.val();
+                var level = parseInt(value);
+                var args;
+                var chosenItemId;
+                var oldCategoryId;
+                var returningData;
+                var mainWindow = window.parent;
+
+                if (level <= 0 || isNaN(level)) {
+                    levelInput.parent().addClass('has-error');
+                    levelInput.focus();
+                    return;
+                }
+
+                args = window.parent.AdminIndexing.Controller.getArgs(location.search);
+                chosenItemId = args['newCategory'];
+                oldCategoryId = args['oldCategory'];
+
+                if (chosenItemId <= 0) {
+                    return;
+                }
+
+                returningData = {
+                    oldCategory: oldCategoryId,
+                    newCategory: chosenItemId,
+                    level: level,
+                    success: true
+                };
+
+                mainWindow.$.closePopupLayer(mainWindow.AdminIndexing.Settings.popups.level.name, returningData);
+            });
+        })
+
+    </script>
+</body>
+</html>

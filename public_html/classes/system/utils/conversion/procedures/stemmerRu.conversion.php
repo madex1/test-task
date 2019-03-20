@@ -1,0 +1,2 @@
+<?php
+ require SYS_KERNEL_PATH . 'utils/conversion/dkStemmer.php';class stemmerRu implements IGenericConversion {public function convert($args) {if (isset($args[0])) {$ve730db5c29b7ba34f4d465b01bd33c5e = new Lingua_Stem_Ru;return $ve730db5c29b7ba34f4d465b01bd33c5e->stem_word($args[0]);}return $args;}}

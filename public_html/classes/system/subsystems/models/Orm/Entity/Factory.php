@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity;use UmiCms\System\Orm\iEntity;abstract class Factory implements iFactory {private $dummyEntity;public function __construct(iEntity $ve37910f6d2aa6d508ffd5b75981f90f2) {$this->setDummyEntity($ve37910f6d2aa6d508ffd5b75981f90f2);}public function create() {return clone $this->getDummyEntity();}protected function setDummyEntity(iEntity $ve37910f6d2aa6d508ffd5b75981f90f2) {$this->dummyEntity = $ve37910f6d2aa6d508ffd5b75981f90f2;return $this;}protected function getDummyEntity() {return $this->dummyEntity;}}

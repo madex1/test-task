@@ -1,0 +1,2 @@
+<?php
+ class nullCacheEngine implements iCacheEngine {const NAME = 'null';public function getName() {return self::NAME;}public function saveRawData($v3c6e0b8a9c15224a8228b9a98ca1531d, $v8d777f385d3dfec8815d20f7496026dc, $vcd91e7679d575a2c548bd2c889c23b9e) {return true;}public function loadRawData($v3c6e0b8a9c15224a8228b9a98ca1531d) {return null;}public function delete($v3c6e0b8a9c15224a8228b9a98ca1531d) {return true;}public function flush() {return true;}public function getIsConnected() {return true;}}

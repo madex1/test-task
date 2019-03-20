@@ -1,0 +1,249 @@
+#main #content .panel .content div.field.menu {width:100% }
+#main #content .panel .content div.field.menu div.field {width: 99.7%;}
+
+.item_add_blocks{
+	float:left;
+	width:37%;
+}
+/*contentPages*/
+.contentPages,
+.menuPages,
+.customPages{
+/*	width:100%;*/
+	margin:0 0 20px;
+	border:1px solid #ccc;
+	-webkit-border-radius:9px;
+	-moz-border-radius:9px;
+	border-radius: 9px;
+}
+.contentPagesWrap,
+.menuPagesWrap,
+.customPagesWrap{
+	padding:10px;
+}
+.contentPages h2,
+.menuPages h2,
+.customPages h2{
+	margin:0 0 10px;
+	font-size:14px;
+}
+
+.contentPages ul.tree-container {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+	position: relative;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+.contentPages ul.tree-container, ul.ti-childs-container {
+	list-style: none;				
+}
+.contentPages ul.ti-childs-container {
+	margin  : 0 0 0 19px;
+	padding : 0;
+}
+.contentPages li.tree-highlight {
+	display: block;
+	height: 16px;
+	width: 100%;
+	background-color: #d0d7dd;
+}
+.contentPages li.tree_toolbar {
+	width: 230px;
+	height:20px;
+	right: 0;
+	padding-top: 2px;
+	background: #d0d7dd url('/images/cms/admin/mac/toolbar.gif') no-repeat 0 -1px;
+}
+.contentPages a.tree_toolbtn {
+	display: block;
+	float: right;
+	margin-left: 10px;
+	width: 22px;
+	height: 16px;
+}
+.contentPages img.ti-toggle {
+	border: 0;
+	margin-left: 2px;
+	vertical-align: middle;
+	width: 11px;
+	height: 11px;
+}
+.contentPages li.ti {
+	padding: 0;
+	margin: 0;
+}
+.contentPages .hover {
+	border-bottom: 1px dashed red;
+}
+.contentPages img.ti-icon {
+	vertical-align: middle;
+	margin: 2px 5px;
+}
+.contentPages div.ti {
+	display: block;
+	white-space: nowrap;
+	color:#3281CD;
+	/*font-family:"Segoe UI",Arial,Tahoma;
+	font-size:11px;
+	text-decoration:none;
+	height: 22px;*/
+	/*background-color: #fff;*/
+}
+.contentPages div.hightlight {
+	background-color: #D0D7DD !important;
+}
+.contentPages div.virtual-hightlight {
+	background-color: #C8EFFF !important;
+}
+.contentPages div.ti-drop {
+	height: 2px;
+	overflow: hidden;
+}
+.contentPages div.ti-drop-as-child {
+	height: 2px;
+	margin-left: 42px;
+	background: transparent;
+	overflow: hidden;
+}
+.contentPages div.ti-drop-as-sibling {
+	height: 2px;
+	background: #00008b;
+	overflow: hidden;
+}
+.contentPages div.ti-draggable {
+	height: 21px;
+	cursor: move;
+}
+.contentPages div.ti-draggable div {
+	margin-left: 20px;
+	padding-top: 5px;
+}
+.contentPages a.ti:active, a.ti:focus {
+	/*background-color: #d0d7dd;*/
+}
+/* indicators */
+.contentPages .page-status {
+	width: 7px;
+	height: 7px;
+	z-index: 2;
+	margin-top: 8px;
+	margin-left: -20px;
+	position: absolute;
+	_position: none;
+}
+/* Local styles */
+.contentPages div.tree-wrapper {
+	border    : 1px solid #ccc;
+	height   : 240px;
+	overflow : auto;
+	position : relative;
+	margin: 10px 0 0;
+	padding: 10px;
+}
+
+#main #content .panel .content div.field .contentPages  select{
+	margin-right: 0;
+}
+
+#main #content .contentPages .tree-container {
+    -webkit-border-radius:0px;
+	-moz-border-radius:0px;
+	border-radius: 0px;
+	border:none;
+}
+#main #content .contentPages .tree-container a {
+    font-size: 11px;
+}
+#main #content .contentPages  div.ti {
+    margin: 0;
+	height: 18px;
+}
+#main #content .contentPages .ti-icon {
+    margin: 0 4px 1px;
+}
+/*\contentPages*/
+
+
+
+
+/*menuPages*/
+.menuPages{
+    /*
+	float:left;
+	width:55%;
+	margin-right:3%;
+    */
+	position:relative;
+}
+
+.menuItemDel,.menuItemEdit{
+	float:right; 
+	width:16px;
+	height:16px;
+	font-size:0;
+	margin: 7px 5px 7px 0;
+}
+./*menuItemDel{background: url(/images/cms/admin/mac/tree/ico_del.png) no-repeat;}
+.menuItemEdit{background: url(/images/cms/admin/mac/tree/ico_edit.png) no-repeat;}*/
+
+.editBlock{display:none; width:100%; margin: 0 0 20px;}
+.editing .editBlock{display:block;}
+
+.editBlockWrap{
+	padding:10px;
+	border:1px solid #ccc;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius: 3px;
+	background:#F9F9F9;
+}
+.formClass p{margin:0 0 5px;}
+.formClass .butonBlock{text-align:right;margin:10px 0;}
+.formClass .button {
+    background: url("/images/cms/eip/buttons_bg.png") no-repeat scroll 0 0 white;
+    border: 1px solid #E3E3E3;
+    -webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border-radius: 4px;
+    color: #555555;
+    cursor: pointer;
+    font-family: Tahoma;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 5px 10px 6px 40px;
+}
+.formClass .cancel {background-position: 5px -31px;}
+.formClass .save {background-position: 5px -1px;}
+/*change system css*/
+#main #content .panel .content div.field .formClass label {overflow:hidden;}
+#main #content .panel .content div.field .formClass label span {
+    margin:0 0 5px;
+	display:block;
+	width:20%;
+	float: left;
+}
+#main #content .panel .content div.field .ti span {
+    display: inline;
+}
+#main #content .panel .content div.field .formClass input.text,
+#main #content .panel .content div.field .formClass input.text{
+	float: right;
+    margin: 0 3px 0 0;
+    width: 79%;
+}
+#main #content .panel .content div.field .formClass .viewLink{
+	margin: 0 0 0 8px;
+}
+#main #content .panel .content div.field .formClass .button {width:auto;} 
+
+/*custom add block*/
+#main #content .panel .content div.field .customPages .formClass label span {
+	width:30%;
+}
+#main #content .panel .content div.field .customPages .formClass input.text,
+#main #content .panel .content div.field .customPages .formClass input.text{width: 69%;}
+.dd-dragel {cursor: move}
+

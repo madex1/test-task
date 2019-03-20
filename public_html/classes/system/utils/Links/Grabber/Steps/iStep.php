@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Links\Grabber\Steps;interface iStep {public function getName();public function setState(array $v9ed39e2ea931586b6a985a6942ef573e);public function grab();public function getState();public function isComplete();public function getResult();public function getStartStateStructure();}

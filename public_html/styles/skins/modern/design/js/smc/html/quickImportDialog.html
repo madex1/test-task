@@ -1,0 +1,17 @@
+<form method='post' id='import-csv-form' enctype="multipart/form-data" action="">
+    <label id='label-csv-file'>{{label:js-csv-import-question}}</label>
+    <input type='file' name='csv-file' id='csv-file' size='28'/>
+    <br/>
+    <br/>
+    <label id="csv_encoding"><span>{{label:js-csv-choose-encoding}}</span>
+        <select name="encoding" class="default newselect">
+            <option value="Windows-1251">Windows-1251</option>
+            <option value="UTF-8">UTF-8</option>
+        </select>
+    </label>
+</form>
+<div class="exchange_container" style="display: none">
+    <div>
+        <img id="process-bar" src="/images/cms/admin/mac/process.gif" class="progress" />
+    </div>
+</div>

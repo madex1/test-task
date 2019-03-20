@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Mail;interface iEngineFactory {public static function get($vadceddddb69e6187bceace83aa4ab0f6);public static function create($vadceddddb69e6187bceace83aa4ab0f6);public static function createDefault();public static function createDummy();}

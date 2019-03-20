@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Links;interface iSourcesCollection extends \iUmiCollection {public function createByLinkIdAndPlace($vab4d719bb5871955352ccf0727db833e, $vebed715e82a0a0f3e950ef6565cdc4a8);public function exportByLinkId($vab4d719bb5871955352ccf0727db833e);}

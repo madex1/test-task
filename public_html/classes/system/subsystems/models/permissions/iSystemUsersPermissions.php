@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Permissions;interface iSystemUsersPermissions {const SV_USER_GUID = 'system-supervisor';const SV_GROUP_GUID = 'users-users-15';const GUEST_USER_GUID = 'system-guest';const REGISTERED_GROUP_GUID = 'users-users-2374';public function __construct(\iUmiObjectsCollection $v22df6b77ddb3d4a444fba472a24b327d);public function getSvUserId();public function getSvGroupId();public function getGuestUserId();public function getRegisteredGroupId();public function getIdList();}

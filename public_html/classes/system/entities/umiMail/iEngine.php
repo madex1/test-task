@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Mail;interface iEngine {public function setSubject($vb5e3374e43f6544852f7751dfc529100);public function setMessage($v78e731027d8fd50ed642340b7c9a63b3);public function setHeaders($v4340fd73e75df7a9d9e45902a59ba3a4);public function setParameters($v166e64f6c3677d0c513901242a3e702d);public function send($v884d9804999fc47a3c2694e49ad2536a);}

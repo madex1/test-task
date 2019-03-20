@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Patterns;interface iArrayContainer extends \iMapContainer {public function __construct(array $vf1f713c9e000f5d3f280adbd124df4f5 = []);public function set($v3c6e0b8a9c15224a8228b9a98ca1531d, $v2063c1608d6e0baf80249c42e2be5804);public function del($vd36a87418dcd06d8fbb68d2a1776284e);public function clear();public function __set($v3c6e0b8a9c15224a8228b9a98ca1531d, $v2063c1608d6e0baf80249c42e2be5804);public function __unset($vd36a87418dcd06d8fbb68d2a1776284e);}

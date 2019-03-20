@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Relation\Mutator;use UmiCms\System\Orm\Entity\iMutator;trait tInjector {private $vb6276ef330616bdbebda986ca9abe267;protected function getRelationMutator() {return $this->relationMutator;}protected function setRelationMutator(iMutator $vd362578f089c49c5fa6209bf00a2f209) {$this->relationMutator = $vd362578f089c49c5fa6209bf00a2f209;return $this;}}

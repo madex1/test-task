@@ -1,0 +1,2 @@
+<?php
+ interface iUmiCaptcha {public static function generateCaptcha(   $v66f6181bcb4cff4cd38fbc804a036db6 = 'default',   $v56d72c4d5259a6034a152e6c02cd754c = 'sys_captcha',   $vf66412bef9a4d9ac818c3141160250bd = '',   $v123c50dcaa827353e19cd0140ab2c896 = ''  );public static function checkCaptcha();public static function getDrawer();}

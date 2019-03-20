@@ -1,0 +1,2 @@
+<?php
+ use UmiCms\System\Trade\Offer\iCharacteristic;class OfferCharacteristicWrapper extends translatorWrapper {public function translate($va8cfde6331bd59eb2ac96f8911c4b666) {return $this->translateData($va8cfde6331bd59eb2ac96f8911c4b666);}protected function translateData(iCharacteristic $va2de09ab89f499d81b112f5ac9af3e2c) {$v1a8db4c996d8ed8289da5f957879ab94 = $va2de09ab89f499d81b112f5ac9af3e2c->getProperty();return translatorWrapper::get($v1a8db4c996d8ed8289da5f957879ab94)->translate($v1a8db4c996d8ed8289da5f957879ab94);}}

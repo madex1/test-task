@@ -1,0 +1,2 @@
+<?php
+ trait tUmiControllerInjector {private $v8b1dc169bf460ee884fceef66c6607d6;public function getCmsController() {if (!$this->cmsController instanceof iCmsController) {throw new Exception('You should set iCmsController first');}return $this->cmsController;}public function setCmsController(iCmsController $v8b1dc169bf460ee884fceef66c6607d6) {$this->cmsController = $v8b1dc169bf460ee884fceef66c6607d6;return $this;}}

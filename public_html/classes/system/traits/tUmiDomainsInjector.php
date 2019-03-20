@@ -1,0 +1,2 @@
+<?php
+ trait tUmiDomainsInjector {private $v0d771fa031fb27561ed207afa6cf9983;public function getDomainCollection() {if (!$this->domainCollection instanceof iDomainsCollection) {throw new Exception('You should set iDomainsCollection first');}return $this->domainCollection;}public function setDomainCollection(\iDomainsCollection $v0d771fa031fb27561ed207afa6cf9983) {$this->domainCollection = $v0d771fa031fb27561ed207afa6cf9983;return $this;}}

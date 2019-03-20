@@ -1,0 +1,2 @@
+<?php
+ class umiRedirectsConstantMap extends baseUmiCollectionConstantMap {const TABLE_NAME = 'cms3_redirects';const EXCHANGE_RELATION_TABLE_NAME = 'cms3_import_redirects';const MADE_BY_USER_FIELD_NAME = 'made_by_user';const CONFIG_SECTION = 'seo';const CONFIG_URL_SUFFIX_ENABLE = 'url-suffix.add';const CONFIG_URL_SUFFIX = 'url-suffix';const CONFIG_AUTO_CREATE_REDIRECT_ENABLE = 'watch-redirects-history';const AUTO_CREATE_REDIRECT_HANDLER_METHOD = 'onModifyPageWatchRedirects';const AUTO_CREATE_REDIRECT_HANDLER_MODULE = 'content';}

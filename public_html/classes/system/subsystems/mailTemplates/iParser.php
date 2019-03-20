@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\MailTemplates;use iUmiObject;use MailTemplate;interface iParser {public function __construct(MailTemplate $v66f6181bcb4cff4cd38fbc804a036db6);public function parse(array $v21ffce5b8a6cc8cc6a41448dd69623c9 = [], array $v7beef54c8a75efe23880c9c3bfaf46d7 = []);}

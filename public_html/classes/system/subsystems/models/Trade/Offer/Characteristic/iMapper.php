@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Characteristic;use UmiCms\System\Orm\Entity\iMapper as iAbstractMapper;interface iMapper extends iAbstractMapper {const NAME = 'name';const TITLE = 'title';const FIELD_TYPE = 'field_type';const VIEW_TYPE = 'view_type';const IS_MULTIPLE = 'is_multiple';const DATA_OBJECT_ID = 'data_object_id';const VALUE = 'value';}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Entities\Image;interface iFactory {public function create($vd6fe1d0be6347b8ef2427fa629c04485);public function createWithAttributes($vd6fe1d0be6347b8ef2427fa629c04485, $v6dd047148d685270458ecc44ee128a4d = []);}

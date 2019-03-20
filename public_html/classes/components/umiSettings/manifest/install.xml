@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<route>
+		<transaction name="update_related_id_on_install">
+			<action name="\UmiCms\Manifest\umiSettings\UpdateRelatedId" />
+		</transaction>
+	</route>
+</manifest>

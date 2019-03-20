@@ -1,0 +1,2 @@
+<?php
+ interface iManifest extends iReadinessWorker, iAtomicOperation {public function __construct(iBaseXmlConfig $v2245023265ae4cf87d02c8b6ba991139, iManifestSource $v36cd38f49b9afa08222c0dc9ebfe35eb, array $v21ffce5b8a6cc8cc6a41448dd69623c9 = []);public function loadTransactions();public function getLog();}

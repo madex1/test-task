@@ -1,0 +1,2 @@
+<?php
+ trait tUmiTemplatesInjector {private $v499180b7234d1268d482e87df304efc4;public function setTemplatesCollection(\iTemplatesCollection $vfed36e93a0509e20f2dc96cbbd85b678) {$this->templatesCollection = $vfed36e93a0509e20f2dc96cbbd85b678;return $this;}public function getTemplatesCollection() {if (!$this->templatesCollection instanceof \iTemplatesCollection) {throw new \RequiredPropertyHasNoValueException('You should inject \iTemplatesCollection first');}return $this->templatesCollection;}}

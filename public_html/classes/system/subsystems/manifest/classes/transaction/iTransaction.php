@@ -1,0 +1,2 @@
+<?php
+ interface iTransaction extends iReadinessWorker, iAtomicOperation {public function __construct($vb068931cc450442b63f5b3d276ea4297);public function getTitle();public function addAction(iAction $v418c5509e2171d55b0aee5c2ea4442b5);}

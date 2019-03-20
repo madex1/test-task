@@ -1,0 +1,2 @@
+<?php
+ trait tUmiDirectoriesInjector {private $v88aa45dc30dd92e28e5e040815abf5c4;public function setDirectoriesHandler(\iUmiDirectory $v88aa45dc30dd92e28e5e040815abf5c4) {$this->directoriesHandler = $v88aa45dc30dd92e28e5e040815abf5c4;return $this;}public function getDirectoriesHandler() {if (!$this->directoriesHandler instanceof \iUmiDirectory) {throw new \RequiredPropertyHasNoValueException('You should inject \iUmiDirectory first');}return $this->directoriesHandler;}}

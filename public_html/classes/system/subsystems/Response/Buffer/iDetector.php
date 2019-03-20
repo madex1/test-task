@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Response\Buffer;use UmiCms\System\Request\Mode\iDetector as ModeDetector;interface iDetector {const DEFAULT_CLI_BUFFER = 'CLIOutputBuffer';const DEFAULT_HTTP_BUFFER = 'HTTPOutputBuffer';public function __construct(ModeDetector $v4076631aa75ae111b33f593b0558da6a);public function detect();}

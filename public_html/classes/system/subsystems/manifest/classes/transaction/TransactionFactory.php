@@ -1,0 +1,2 @@
+<?php
+ class TransactionFactory implements iTransactionFactory {use tAtomicOperationStateFile;public function create($vb068931cc450442b63f5b3d276ea4297) {$vf4d5b76a2418eba4baeabc1ed9142b54 = new Transaction($vb068931cc450442b63f5b3d276ea4297);$v17686b6dc6aae6ad46d83d04aa895405 = $this->getFilePath($vf4d5b76a2418eba4baeabc1ed9142b54);$vf4d5b76a2418eba4baeabc1ed9142b54->setStatePath($v17686b6dc6aae6ad46d83d04aa895405);$vf4d5b76a2418eba4baeabc1ed9142b54->loadState();return $vf4d5b76a2418eba4baeabc1ed9142b54;}}

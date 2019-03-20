@@ -1,0 +1,2 @@
+<?php
+ class mailTemplatesConstantMap extends baseUmiCollectionConstantMap {const TABLE_NAME = 'cms3_mail_templates';const EXCHANGE_RELATION_TABLE_NAME = 'cms3_import_mail_templates';const NOTIFICATION_ID_FIELD_NAME = 'notification_id';const TYPE_FIELD_NAME = 'type';const CONTENT_FIELD_NAME = 'content';}

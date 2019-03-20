@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\QuickExchange\Source;interface iDetector {public function __construct(\iCmsController $v8b1dc169bf460ee884fceef66c6607d6);public function detectForImport();public function detectForExport();}

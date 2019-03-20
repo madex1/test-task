@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Response;trait tInjector {private $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe;public function setResponse(iFacade $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe) {$this->response = $vd1fc8eaf36937be0c3ba8cfe0a2c1bfe;return $this;}public function getResponse() {if (!$this->response instanceof iFacade) {throw new \DependencyNotInjectedException('You should inject UmiCms\System\Response\iFacade first');}return $this->response;}}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Demolisher;use UmiCms\System\Orm\Entity\iDemolisher;trait tInjector {private $v01785e53d949d6df885f78b3939831f2;protected function getDemolisher() {return $this->demolisher;}protected function setDemolisher(iDemolisher $v01785e53d949d6df885f78b3939831f2) {$this->demolisher = $v01785e53d949d6df885f78b3939831f2;return $this;}}

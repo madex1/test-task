@@ -1,0 +1,86 @@
+<div>
+	<div id="field_template">
+		<form id="optionedFieldForm">
+			<div class="row">
+				<div class="col-md-12 optioned">
+					<div>
+						<div class="title-edit">
+							<acronym>
+								{%= title %}
+							</acronym>
+						</div>
+
+						<div class="values">
+							{%html optionsHtml %}
+						</div>
+
+						<div class="layout-row-icon row">
+							<div class="col-md-6" style="min-height:10px;">
+								<div class="optioned-select-container">
+									<div class="selectize-container">
+										<select umi:guide="{%= guideId %}" umi:name="{%= inputName %}"></select>
+									</div>
+
+									{%if isPublic%}
+									<div>
+										<a href="{%= langPrefix %}/admin/data/guide_items/{%= guideId %}/">
+											{%= labelEditGuideItems %}
+										</a>
+									</div>
+									{%/if%}
+								</div>
+
+								{%if isPublic%}
+								<div class="layout-col-icon optioned-add-relation-container">
+									<a class="icon-action relation-add">
+										<i class="small-ico i-add" title="{%= labelAddRelationItem %}"></i>
+									</a>
+								</div>
+								{%/if%}
+							</div>
+
+							<div class="col-md-5">
+								<div class="layout-col-control">
+									<input type="number" class="default edit number" umi:type="{%= type %}" step="any" autocomplete="off" />
+								</div>
+
+								<div class="layout-col-icon">
+									<a class="icon-action add-option">
+										<i class="small-ico i-add" title="{%= labelAddOption %}"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div id="option_template">
+		<div class="layout-row-icon row" xmlns:umi="http://www.w3.org/1999/xhtml">
+			<div class="col-md-6" style="min-height:10px;">
+				{%= label %}
+				<input type="hidden" name="{%= inputName %}[{%= position %}][rel]" value="{%= relationId %}" />
+			</div>
+
+			<div class="col-md-5">
+				<div class="layout-col-control">
+					{%if isStores%}
+					<input type="number" class="default edit number" name="{%= inputName %}[{%= position %}][int]" value="{%= value %}" />
+					<input type="hidden" umi:type="float" name="{%= inputName %}[{%= position %}][float]" value="1" />
+					{%else%}
+					<input type="number" class="default edit number" name="{%= inputName %}[{%= position %}][float]" step="any" value="{%= value %}" />
+					<input type="hidden" umi:type="int" name="{%= inputName %}[{%= position %}][int]" value="1" />
+					{%/if%}
+				</div>
+
+				<div class="layout-col-icon">
+					<a class="icon-action remove-option">
+						<i class="small-ico i-remove" title="{%= labelRemoveOption %}"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

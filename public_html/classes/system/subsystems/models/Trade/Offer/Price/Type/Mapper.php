@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price\Type;use UmiCms\System\Orm\Entity\Mapper as AbstractMapper;class Mapper extends AbstractMapper implements iMapper {public function getAttributeSchemaList() {return parent::getAttributeSchemaList() + [    self::NAME => [     'getName',     'setName',     'string'    ],    self::TITLE => [     'getTitle',     'setTitle',     'string'    ],    self::IS_DEFAULT => [     'isDefault',     'setDefault',     'boolean'    ]   ];}}

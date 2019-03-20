@@ -1,0 +1,2 @@
+<?php
+ class CreateDirectoryAction extends Action {public function execute() {$v8f151e9a95fab4196b21c1f8055a9d80 = (array) $this->getParam('targets');foreach ($v8f151e9a95fab4196b21c1f8055a9d80 as $v47826cacc65c665212b821e6ff80b9b0) {$this->createDirectory($v47826cacc65c665212b821e6ff80b9b0);}}public function rollback() {$v8f151e9a95fab4196b21c1f8055a9d80 = (array) $this->getParam('targets');foreach ($v8f151e9a95fab4196b21c1f8055a9d80 as $v47826cacc65c665212b821e6ff80b9b0) {$this->removeDirectory($v47826cacc65c665212b821e6ff80b9b0);}}}

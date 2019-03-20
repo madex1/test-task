@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache\Key\Validator;use UmiCms\System\Cache\Key\Validator;class BlackList extends Validator {public function isValid($v3c6e0b8a9c15224a8228b9a98ca1531d) {return !$this->isOnBlackList($v3c6e0b8a9c15224a8228b9a98ca1531d);}}

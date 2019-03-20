@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Relation\Accessor;use UmiCms\System\Orm\Entity\iAccessor;trait tInjector {private $v33be3a3c75ce4db80ebf75afaca4e008;protected function getRelationAccessor() {return $this->relationAccessor;}protected function setRelationAccessor(iAccessor $v9efcb42ee143be09c45d33ed2fba175b) {$this->relationAccessor = $v9efcb42ee143be09c45d33ed2fba175b;return $this;}}

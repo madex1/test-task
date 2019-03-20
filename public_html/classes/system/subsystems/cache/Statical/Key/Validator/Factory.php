@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Cache\Statical\Key\Validator;use UmiCms\System\Cache\Key\Validator\Factory as BaseFactory;class Factory extends BaseFactory implements iFactory {protected function getDefaultKeyValidatorName() {return (string) $this->getConfiguration()    ->get('cache', 'static.key-validator');}}

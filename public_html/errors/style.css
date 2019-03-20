@@ -1,0 +1,95 @@
+a{
+	border:none;
+	outline:none;
+	color: #26a1ff;
+}
+img {
+	border:none;
+}
+h1,h2 {
+	margin: 0;
+	padding: 30px;
+	color: #4c535d;
+	text-shadow: 1px 0.5px 0px white;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 30px;
+}
+h2 {
+	padding: 0 0 10px 0;
+	font-size: 20px;
+	line-height: 26px;
+}
+p {
+	margin: 7px 0 0 0;
+}
+.exception {
+	width: 80%;
+	margin: 40px auto;
+	padding: 0;
+	box-shadow: 5px 5px 10px #dadada;
+	border: 1px solid #cecece;
+	border-radius: 10px;
+	font-family: "MyriadProRegular", Arial, Verdana, Tahoma, Geneva, sans-serif;
+}
+#header {
+	height: 88px;
+	margin: 0;
+	padding: 0;
+	background: url("https://install.umi-cms.ru/bg_gray_top.png") repeat-x center center ;
+	position: relative;
+	border-radius: 10px 10px 0 0;
+}
+#message {
+	margin: 0;
+	padding: 30px 75px 50px 75px;
+	background: #f8f8f8;
+	border-top: 1px solid #ededed;
+
+	position: relative;
+}
+#footer {
+	height: 30px;
+	margin: 0;
+	padding: 10px 0 10px 650px;
+	background: #f8f8f8;
+	border-radius: 0 0 10px 10px;
+	font-size: 12px;
+	color: gray;
+}
+div.trace {
+	width: 90%;
+	text-align: left;
+	overflow: auto;
+	white-space: pre;
+}
+.logo {
+	position: absolute;
+	top: 15px;
+	right: 30px;
+}
+.button {
+	margin: 10px;
+	background: url("https://install.umi-cms.ru/bg_blue_button.png") repeat-x center center;
+	height: 35px;
+	color: white;
+	border-radius: 10px;
+	font-size: 12px;
+	border: 1px solid #3CBBE8;
+	text-align: center;
+	padding: 4px 8px;
+	cursor: pointer;
+}
+#keycode {
+	border-radius: 10px;
+	border-color:#828282 #D1D1D1 #D1D1D1;
+	border-right:1px solid #D1D1D1;
+	border-style:solid;
+	border-width:1px;
+	height:30px;
+	line-height:29px;
+	padding-left:10px;
+	width:450px;
+	position:relative;
+	margin:13px 0 0 0;
+}

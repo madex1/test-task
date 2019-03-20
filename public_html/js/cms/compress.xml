@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filepack>
+	<packages>
+		<!-- CSS для Edit-In-Place -->
+		<pack path="compiled.css" type="css">
+			<file path="../jquery/ui.all.css" delete="false" />
+			<file path="eip/design.css" delete="false" />
+			<file path="eip/img_editor.css" delete="false" />
+			<file path="utils/img_area_select.css" delete="false" />
+			<file path="panel/design.css" delete="false" />
+			<file path="../../styles/skins/modern/design/css/popup.css" delete="false" />
+			<file path="../../styles/skins/mac/design/calendar/calendar.css" delete="false" />
+			<file path="../jquery/fancybox/jquery.fancybox.css" delete="false" />
+		</pack>
+		<!-- Основной набор JS для Edit-In-Place -->
+		<pack path="compiled.js" type="js">
+			<file path="../moment/moment.js" delete="false" />
+			<file path="../moment/ru.js" delete="false" />
+			<file path="admin.js" delete="false" />
+			<file path="panel/panel.js" delete="false" />
+			<file path="panel/tickets.js" delete="false" />
+			<file path="eip/edit_in_place.js" delete="false" />
+			<file path="eip/img_editor.js" delete="false" />
+			<file path="eip/editor.js" delete="false" />
+			<file path="wysiwyg/wysiwyg.js" delete="false" />
+			<file path="session.js" delete="false" />
+			<file path="utils/rgbcolor.js" delete="false" />
+			<file path="../../styles/common/js/relation.control.js" delete="false" />
+			<file path="../../styles/common/js/symlink.control.js" delete="false" />
+		</pack>
+		<!-- JS jQuery-плагины -->
+		<pack path="jquery.compiled.js" type="js">
+			<file path="../jquery/jquery.js" delete="false" />
+			<file path="../jquery/jquery-migrate.js" delete="false" />
+			<file path="../jquery/jquery-ui.js" delete="false" />
+			<file path="../jquery/jquery-ui-i18n.js" delete="false" />
+			<file path="../jquery/jquery.umipopups.js" delete="false" />
+			<file path="../jquery/jquery.jgrowl_minimized.js" delete="false" />
+			<file path="../jquery/jquery.cookie.js" delete="false" />
+			<file path="../jquery/fancybox/jquery.fancybox.js" delete="false" />
+			<file path="init_fancybox.js" delete="false" />
+			<file path="utils/img_area_select.js" delete="false" />
+		</pack>
+		<pack path="wysiwyg/tinymce/jscripts/tiny_mce/themes/umi/editor_template.js" type="js">
+			<file path="wysiwyg/tinymce/jscripts/tiny_mce/themes/umi/editor_template_src.js" delete="false" />
+		</pack>
+	</packages>
+</filepack>

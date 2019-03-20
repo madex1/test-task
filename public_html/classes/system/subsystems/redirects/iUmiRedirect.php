@@ -1,0 +1,2 @@
+<?php
+ interface iUmiRedirect {public function getSource();public function getTarget();public function getStatus();public function isMadeByUser();public function setSource($v36cd38f49b9afa08222c0dc9ebfe35eb);public function setTarget($v42aefbae01d2dfd981f7da7d823d689e);public function setStatus($v9acb44549b41563697bb490144ec6258);public function setIsMadeByUser($va370db87697def2884acf795570aa074);public static function getRedirectMessage($v9acb44549b41563697bb490144ec6258);}

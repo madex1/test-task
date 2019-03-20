@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Request\Mode;use UmiCms\System\Request\Path\iResolver;interface iDetector {const ADMIN_MODE = 'admin';const SITE_MODE = '';const CLI_MODE = 'cli';public function __construct(iResolver $v4cb6e1fae20c2f513df8e826f6ba45df);public function detect();public function isAdmin();public function isSite();public function isCli();}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Characteristic;use \iUmiField as iField;use \iUmiObjectsCollection as iObjectFacade;use UmiCms\System\Trade\Offer\iCharacteristic;interface iFactory {public function __construct(iObjectFacade $v51bee6c1b54168126341d69a43ba7429);public function create(iField $v06e3d36fa30cea095545139854ad1fb9);public function createList(array $v69fe4aec8073954bf273e3113edd24cf);}

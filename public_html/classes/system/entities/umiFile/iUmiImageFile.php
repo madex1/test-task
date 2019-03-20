@@ -1,0 +1,2 @@
+<?php
+ interface iUmiImageFile extends iUmiFile {public function getMimeType();public function getAlt();public function setAlt($v34823136d0dd91d0f5d22db740f7679c);public function getTitle();public function setTitle($vd5d3db1765287eef77d7927cc956f50a);public function getWidth();public function getHeight();}

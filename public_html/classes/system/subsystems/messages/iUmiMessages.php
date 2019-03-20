@@ -1,0 +1,2 @@
+<?php
+ interface iUmiMessages {public static function getAllowedTypes();public function getMessages($v3b8cb51bd8c4ef331893ce61e3f3bc39 = false, $vcddce64c174af26a6a96332151d4013c = false);public function getSendedMessages($vf971c32bc4e78145496d6fc158959139 = false);public function create($v599dcce2998a6b40b1e38e8c6006cb0a = 'private');public function testMessages();public function dropTestMessages();}

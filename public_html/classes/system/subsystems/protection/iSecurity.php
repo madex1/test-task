@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Protection;use UmiCms\System\Request\iFacade;interface iSecurity {public function __construct(iFacade $v10573b873d2fa5a365d558a45e328e47, \iConfiguration $vccd1066343c95877b75b79d47c36bebe,   iCsrfProtection $ve8925c7db313b3366ba6f2d2bd078a83, iHashComparator $v9cb170b1e9321537ce4ae3eaa340f9d4);public function checkCsrf();public function checkOrigin();public function checkReferrer();public function hashEquals($v259c8c22a88fafc6406b942136250f03, $v9077a54854311ad32ae36f1803187289);}

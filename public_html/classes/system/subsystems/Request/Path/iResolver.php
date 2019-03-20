@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Request\Path;use UmiCms\System\Request\Http\iGet;interface iResolver {public function __construct(iGet $v0093d01f722d72f92a2f51227e27c6d9, \iConfiguration $vccd1066343c95877b75b79d47c36bebe);public function get();public function getParts();}

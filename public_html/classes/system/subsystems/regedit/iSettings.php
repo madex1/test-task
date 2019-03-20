@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Registry;interface iSettings extends iPart {public function getLicense();public function getVersion();public function getRevision();public function setRevision($vb5f927bae9a11c2967a368e3e9bd9e75);public function getEdition();public function getUpdateTime();public function getStatus();}

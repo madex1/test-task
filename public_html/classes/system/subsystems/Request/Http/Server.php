@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Request\Http;use UmiCms\System\Patterns\ArrayContainer;class Server extends ArrayContainer implements iServer {public function __construct(array $vf1f713c9e000f5d3f280adbd124df4f5 = []) {if (empty($vf1f713c9e000f5d3f280adbd124df4f5)) {$this->array = $_SERVER;}else {parent::__construct($vf1f713c9e000f5d3f280adbd124df4f5);}}}

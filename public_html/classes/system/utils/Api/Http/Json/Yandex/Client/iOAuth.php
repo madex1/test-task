@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Api\Http\Json\Yandex\Client;interface iOAuth {public function __construct();public function setAuth($vd56b699830e77ba53855679cb1d252da, $v5f4dcc3b5aa765d61d8327deb882cf99);public function getTokenByUserCode($vc13367945d5d4c91047b3b50234aa7ab);}

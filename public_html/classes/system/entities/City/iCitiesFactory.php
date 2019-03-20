@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Entities\City;interface iCitiesFactory {public static function createByObject(\iUmiObject $va8cfde6331bd59eb2ac96f8911c4b666);public static function createByObjectId($v16b2b26000987faccb260b9d39df1269);public static function createByName($vb068931cc450442b63f5b3d276ea4297);}

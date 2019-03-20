@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Mail\Engine;use UmiCms\Mail;class phpMail extends Mail\Engine {public function send($v884d9804999fc47a3c2694e49ad2536a) {return mail($v884d9804999fc47a3c2694e49ad2536a, $this->getSubject(), $this->getMessage(), $this->getHeaders(), $this->getParameters());}}

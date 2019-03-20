@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\Classes\System\Utils\Mail;use UmiCms\System\Hierarchy\Domain\iDetector as DomainDetector;use UmiCms\System\Hierarchy\Language\iDetector as LanguageDetector;interface iSettings {public function __construct(   \iRegedit $va9205dcfd4a6f7c2cbe8be01566ff84a,   DomainDetector $v45651ec82e45766b3d707ee33df1a61a,   LanguageDetector $vf24870e9df244bb77374445d936a6741  );public function getAdminEmail();public function getSenderEmail();public function getSenderName();}

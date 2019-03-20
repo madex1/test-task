@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Hierarchy\Language;use UmiCms\System\Hierarchy\Domain\iDetector as DomainDetector;use UmiCms\System\Request\iFacade;interface iDetector {public function __construct(   \iLangsCollection $vffae938c1d7ffccb4fffb0259d052c2a,   DomainDetector $v45651ec82e45766b3d707ee33df1a61a,   iFacade $v10573b873d2fa5a365d558a45e328e47,   \iUmiHierarchy $vf8aea31a0fd948447674cb859137e6e7  );public function detect();public function detectId();public function detectPrefix();}

@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade;use \iUmiObject as iDataObject;interface iStock {public function __construct(iDataObject $va8cfde6331bd59eb2ac96f8911c4b666);public function getId();public function getName();public function setName($vb068931cc450442b63f5b3d276ea4297);public function isDefault();public function setDefault($v327a6c4304ad5938eaf0efb6cc3e53dc = true);public function getDataObject();public function getBalanceViewType();public function getBalanceTitle();}

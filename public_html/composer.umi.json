@@ -1,0 +1,8 @@
+{
+  "require": {
+    "nixsolutions/yandex-php-library": "0.2.0",
+    "phpmailer/phpmailer": "~6.0",
+    "studio-42/elfinder": "~2.1.46",
+    "emojione/emojione": "~4.0"
+  }
+}

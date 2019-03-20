@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<route>
+		<transaction name="make_system_backup">
+			<action name="CreateDirectory">
+				<param name="targets">
+					<param name="backup-directory" value="./sys-temp/manifest/backup"/>
+					<param name="temporary-directory" value="./sys-temp/manifest/temp-sys-files/"/>
+				</param>
+			</action>
+			<action name="CheckPermissions">
+				<param name="target" value="." />
+				<param name="mode" value="write" />
+			</action>
+			<action name="MakeFilesBackup">
+				<param name="temporary-directory" value="./sys-temp/manifest/temp-sys-files/"/>
+				<param name="targets">
+					<param name=".htaccess" value=".htaccess" />
+					<param name="autothumbs.php" value="autothumbs.php" />
+					<param name="captcha.php" value="captcha.php" />
+					<param name="config.ini" value="config.ini" />
+					<param name="counter.php" value="counter.php" />
+					<param name="cron.php" value="cron.php" />
+					<param name="filemonitor.php" value="filemonitor.php" />
+					<param name="go-out.php" value="go-out.php" />
+					<param name="index.php" value="index.php" />
+					<param name="releaseStreams.php" value="releaseStreams.php" />
+					<param name="sbots.php" value="sbots.php" />
+					<param name="session.php" value="session.php" />
+					<param name="sitemap.php" value="sitemap.php" />
+					<param name="standalone.php" value="standalone.php" />
+					<param name="static_banner.php" value="static_banner.php" />
+					<param name="tinyurl.php" value="tinyurl.php" />
+					<param name="classes" value="classes" />
+					<param name="css" value="css" />
+					<param name="errors" value="errors" />
+					<param name="js" value="js" />
+					<param name="libs" value="libs" />
+					<param name="man" value="man" />
+					<param name="smu" value="smu" />
+					<param name="styles" value="styles" />
+					<param name="templates" value="templates" />
+					<param name="tpls" value="tpls" />
+					<param name="umaps" value="umaps" />
+					<param name="usels" value="usels" />
+					<param name="xsl" value="xsl" />
+					<param name="xsltTpls" value="xsltTpls" />
+				</param>
+			</action>
+			<action name="CompressDirectory">
+				<param name="target-directory" value="./sys-temp/manifest/temp-sys-files/" />
+				<param name="output-file-name" value="./sys-temp/manifest/backup/backup-files-{Y-m-d-H-i-s}.zip" />
+			</action>
+			<action name="RemoveDirectory">
+				<param name="target-directory" value="./sys-temp/manifest/temp-sys-files/" />
+			</action>
+		</transaction>
+	</route>
+</manifest>

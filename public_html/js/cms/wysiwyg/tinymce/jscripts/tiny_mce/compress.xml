@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<filepack>
+	<packages>
+		<pack path="tiny_mce.js" type="js">
+			<file path="tiny_mce_src.js" delete="false" />
+		</pack>
+
+		<!-- TinyMCE Plugins -->
+
+		<pack path="plugins/advhr/editor_plugin.js" type="js">
+			<file path="plugins/advhr/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/advimage/editor_plugin.js" type="js">
+			<file path="plugins/advimage/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/advlink/editor_plugin.js" type="js">
+			<file path="plugins/advlink/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/advlist/editor_plugin.js" type="js">
+			<file path="plugins/advlist/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/autoresize/editor_plugin.js" type="js">
+			<file path="plugins/autoresize/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/autosave/editor_plugin.js" type="js">
+			<file path="plugins/autosave/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/bbcode/editor_plugin.js" type="js">
+			<file path="plugins/bbcode/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/compat2x/editor_plugin.js" type="js">
+			<file path="plugins/compat2x/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/contextmenu/editor_plugin.js" type="js">
+			<file path="plugins/contextmenu/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/directionality/editor_plugin.js" type="js">
+			<file path="plugins/directionality/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/emotions/editor_plugin.js" type="js">
+			<file path="plugins/emotions/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/example/editor_plugin.js" type="js">
+			<file path="plugins/example/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/fullpage/editor_plugin.js" type="js">
+			<file path="plugins/fullpage/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/fullscreen/editor_plugin.js" type="js">
+			<file path="plugins/fullscreen/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/iespell/editor_plugin.js" type="js">
+			<file path="plugins/iespell/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/inlinepopups/editor_plugin.js" type="js">
+			<file path="plugins/inlinepopups/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/insertdatetime/editor_plugin.js" type="js">
+			<file path="plugins/insertdatetime/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/layer/editor_plugin.js" type="js">
+			<file path="plugins/layer/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/legacyoutput/editor_plugin.js" type="js">
+			<file path="plugins/legacyoutput/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/media/editor_plugin.js" type="js">
+			<file path="plugins/media/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/nonbreaking/editor_plugin.js" type="js">
+			<file path="plugins/nonbreaking/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/noneditable/editor_plugin.js" type="js">
+			<file path="plugins/noneditable/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/pagebreak/editor_plugin.js" type="js">
+			<file path="plugins/pagebreak/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/paste/editor_plugin.js" type="js">
+			<file path="plugins/paste/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/preview/editor_plugin.js" type="js">
+			<file path="plugins/preview/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/print/editor_plugin.js" type="js">
+			<file path="plugins/print/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/safari/editor_plugin.js" type="js">
+			<file path="plugins/safari/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/save/editor_plugin.js" type="js">
+			<file path="plugins/save/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/searchreplace/editor_plugin.js" type="js">
+			<file path="plugins/searchreplace/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/spellchecker/editor_plugin.js" type="js">
+			<file path="plugins/spellchecker/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/style/editor_plugin.js" type="js">
+			<file path="plugins/style/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/tabfocus/editor_plugin.js" type="js">
+			<file path="plugins/tabfocus/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/table/editor_plugin.js" type="js">
+			<file path="plugins/table/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/template/editor_plugin.js" type="js">
+			<file path="plugins/template/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/visualchars/editor_plugin.js" type="js">
+			<file path="plugins/visualchars/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/wordcount/editor_plugin.js" type="js">
+			<file path="plugins/wordcount/editor_plugin_src.js" delete="false" />
+		</pack>
+		<pack path="plugins/xhtmlxtras/editor_plugin.js" type="js">
+			<file path="plugins/xhtmlxtras/editor_plugin_src.js" delete="false" />
+		</pack>
+
+		<!-- themes -->
+
+		<pack path="themes/advanced/editor_template.js" type="js">
+			<file path="themes/advanced/editor_template_src.js" delete="false" />
+		</pack>
+		<pack path="themes/simple/editor_template.js" type="js">
+			<file path="themes/simple/editor_template_src.js" delete="false" />
+		</pack>
+		<pack path="themes/umi/editor_template.js" type="js">
+			<file path="themes/umi/editor_template_src.js" delete="false" />
+		</pack>
+		<pack path="themes/umiru/editor_template.js" type="js">
+			<file path="themes/umiru/editor_template_src.js" delete="false" />
+		</pack>
+		<pack path="themes/umisimple/editor_template.js" type="js">
+			<file path="themes/umisimple/editor_template_src.js" delete="false" />
+		</pack>
+
+	</packages>
+</filepack>

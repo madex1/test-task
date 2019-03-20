@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Orm\Entity\Schema;use UmiCms\System\Orm\Entity\iSchema;trait tInjector {private $vc9550d5fad73447fc24ba47f95d1c6b7;protected function getSchema() {return $this->schema;}protected function setSchema(iSchema $vc9550d5fad73447fc24ba47f95d1c6b7) {$this->schema = $vc9550d5fad73447fc24ba47f95d1c6b7;return $this;}}

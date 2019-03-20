@@ -1,0 +1,92 @@
+.guideline {
+    width: 960px;
+    margin: 50px auto;
+}
+.guideline .note {
+    display: inline-block;
+    font-family: "Segoe UI Bold", Arial, Tahoma;
+    color: #00a0dc;
+    border-bottom: 1px dotted #00a0dc;
+}
+.guideline .note:hover {
+    text-decoration: none;
+}
+.guideline table {
+    width: 100%;
+}
+.guideline th {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-family: "Segoe UI", Arial, Tahoma;
+    font-size: 24px;
+    text-transform: uppercase;
+    vertical-align: top;
+    background: #e0e0e0;
+}
+.guideline th span {
+    font-size: 16px;
+}
+.guideline th a {
+    font-family: "Segoe UI Bold", Arial, Tahoma;
+}
+.guideline td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+.guideline .bg-black {
+    background: #000;
+}
+.guideline .bg-grey {
+    background: #00a0dc;
+}
+.guideline .nav {
+    width: 170px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    background: #1f232b;
+    z-index: 1;
+}
+.guideline .nav a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 10px;
+    color: #fff;
+    transition: 0.3s all ease;
+}
+.guideline .nav a.selected {
+    background: #00a0dc;
+    cursor: default;
+}
+.guideline .nav a:not(.selected):hover {
+    background: #656565;
+}
+.guideline .bugs {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #F65314;
+    padding: 10px 0;
+    color: #fff;
+    z-index: 1;
+}
+.guideline ol {
+    list-style-type: decimal;
+    margin-left: 30px;
+}
+.segoe_semilight {
+    font-family: "Segoe UI SemiLight", Arial, Tahoma;
+}
+.segoe_regular {
+    font-family: "Segoe UI", Arial, Tahoma;
+}
+.segoe_bold {
+    font-family: "Segoe UI Bold", Arial, Tahoma;
+}
+.segoe_semibold {
+    font-family: "Segoe UI SemiBold", Arial, Tahoma;
+}

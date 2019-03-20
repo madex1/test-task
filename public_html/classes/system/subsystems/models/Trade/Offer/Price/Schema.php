@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price;use UmiCms\System\Orm\Entity\Schema as AbstractSchema;class Schema extends AbstractSchema implements iSchema {protected function getRelatedContainerCustomNameList() {return parent::getRelatedContainerCustomNameList() + [    iMapper::CURRENCY_ID => 'cms3_objects'   ];}protected function getRelatedExchangeCustomNameList() {return parent::getRelatedExchangeCustomNameList() + [    iMapper::CURRENCY_ID => 'cms3_import_objects'   ];}protected function getNameSpaceRoot() {return 'UmiCms\System\Trade\\';}}

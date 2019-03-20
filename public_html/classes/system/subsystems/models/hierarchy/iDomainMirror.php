@@ -1,0 +1,2 @@
+<?php
+ interface iDomainMirror extends iUmiEntinty {public function getHost($v97a57645a3f0e1518f8c9f4d340d4c4f = false);public function setHost($v67b3dba8bc6778101892eb77249db32e);public function getDomainId();public function setDomainId($vb80bb7740288fda1f201890375a60c8f);}

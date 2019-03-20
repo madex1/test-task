@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<route>
+		<transaction name="restore_system_backup">
+			<action name="CreateDirectory">
+				<param name="targets">
+					<param name="backup-directory" value="./sys-temp/manifest/backup"/>
+					<param name="temporary-directory" value="./sys-temp/manifest/temp-sys-files"/>
+				</param>
+			</action>
+			<action name="DecompressDirectory">
+				<param name="archive-filepath" value="./sys-temp/manifest/backup/{external-archive-filepath}" />
+				<param name="target-directory" value="./sys-temp/manifest/temp-sys-files" />
+			</action>
+			<action name="CompareDirectoriesPermissions">
+				<param name="source-directory" value="./sys-temp/manifest/temp-sys-files" />
+				<param name="target-directory" value="./" />
+			</action>
+			<action name="CopyDirectory">
+				<param name="source-directory" value="./sys-temp/manifest/temp-sys-files" />
+				<param name="target-directory" value="." />
+			</action>
+			<action name="RemoveDirectory">
+				<param name="target-directory" value="./sys-temp/manifest/temp-sys-files" />
+			</action>
+			<action name="DeleteFiles">
+				<param name="target-directory" value="./" />
+				<param name="pattern" value="/(.*bak$)/" />
+			</action>
+		</transaction>
+	</route>
+</manifest>

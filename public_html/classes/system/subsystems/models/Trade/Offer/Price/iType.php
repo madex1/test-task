@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Trade\Offer\Price;use UmiCms\System\Orm\iEntity;interface iType extends iEntity {public function getName();public function setName($vb068931cc450442b63f5b3d276ea4297);public function getTitle();public function setTitle($vd5d3db1765287eef77d7927cc956f50a);public function isDefault();public function setDefault($v327a6c4304ad5938eaf0efb6cc3e53dc = true);public function getPriceViewType();public function getPriceTitle();}

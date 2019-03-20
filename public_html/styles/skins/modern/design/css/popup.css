@@ -1,0 +1,217 @@
+.popupHeader {
+	height           : 20px;
+	background-color : #000;
+	padding-left     : 10px;
+	padding-right    : 10px;
+}
+
+.popupTitle {
+	vertical-align : middle;
+	font-weight    : bold;
+	color          : #fff;
+}
+
+.popupClose {
+	float : right;
+}
+
+.popupClose a {
+	text-decoration : none;
+	color           : #8acced;
+}
+
+.popupBody {
+	background-color : #fff;
+	padding : 0;
+}
+
+/*window*/
+.eip_win {
+	position: absolute;
+	width: 569px;
+	background: #fff;
+	box-shadow: 0 0 6px rgba(31,41,40,0.7);
+	border-radius: 10px 10px 0 0;
+}
+.eip_win_head {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.eip_win .eip_win_head {
+	position: relative;
+	padding: 5px 10px 10px 20px;
+	background: #00a0dc;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 10px 10px 0 0;
+	cursor: move;
+	height: 35px;
+}
+.eip_win .eip_win_head .eip_win_title{
+	font-family: "Segoe UI", Arial, Tahoma;
+	cursor: move;
+	display: inline-block;
+}
+.eip_win .eip_win_head .eip_win_close {
+	height: 9px;
+	line-height: 9px;
+	width: 9px;
+	background: url(/images/cms/eip/close.png) no-repeat;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+.eip_win .eip_win_body {
+	padding: 1px !important;
+}
+.eip_win .eip_win_body .popupText {
+	font-family: "Segoe UI", Arial, Tahoma;
+	font-size: 14px;
+	padding: 15px 0 0 20px;
+}
+.eip_win .eip_win_body .popupText .exchange_container div {
+	margin-bottom: 10px;
+}
+
+.eip_win .eip_win_body .popupText .exchange_container div.status {
+	margin-bottom: 5px;
+}
+
+.eip_win .eip_win_body .popupText .exchange_container img.progress {
+	width: 100%;
+	height: 17px;
+	border: solid 1px #dedede;
+}
+.eip_win .eip_win_body .popupText .exchange_container div#import_log {
+	height: 84px;
+	width: 100%;
+	overflow: auto;
+	border: 1px solid #dedede;
+
+
+	background-color: white;
+	font-size: 10px;
+}
+.eip_win .eip_win_body h3 {
+	color: #707070;
+	margin: 0 0 20px 0;
+	font-size: 11px;
+}
+.eip_win .eip_win_body .eip_page_type_choice {
+	height: 112px;
+	width: 112px;
+	background: url(/images/cms/eip/add_page_bg.png) no-repeat;
+	margin: 0 10px 20px 10px;
+	float: left;
+	cursor: pointer;
+	text-align: center;
+}
+.eip_win .eip_win_body .eip_page_type_choice img {
+	padding: 5px 0;
+}
+.eip_win .eip_win_body .eip_page_type_choice .eip_page_type_choice_title {
+	padding: 0 10px;
+}
+.eip_win .eip_win_body iframe {
+	border: none;
+	width: 100%;
+}
+.eip_win .eip_win_body #container {
+	overflow: hidden;
+}
+.eip_buttons {
+	padding: 20px;
+}
+.eip_buttons input {
+	float: right;
+	height: 26px;
+	display: inline-block;
+	padding: 0 10px;
+	margin-left: 5px;
+	font-size: 14px;
+	color: #fff;
+	line-height: 23px;
+	border-radius: 3px;
+	cursor: pointer;
+	background: #00a0dc;
+}
+
+.eip_buttons input:hover{
+	background: #0887B7;
+}
+.eip_buttons input[disabled] {
+	opacity: 0.5;
+}
+.eip_buttons input.ok {
+	background-position: 5px -1px;
+}
+.eip_buttons input.back {
+	background-position: 5px -31px;
+}
+.eip_buttons input.repeat {
+	background-position: 5px -61px;
+}
+.eip_buttons input.stop {
+	background-position: 5px -94px;
+}
+
+#zipform {
+	position:relative;
+}
+#watermark {
+	float:left;
+	position:absolute;
+	bottom:-21px;
+	left:0px;
+	*bottom:-20px;
+}
+#zipform #path + label {
+	position:absolute;
+	bottom:-18px;
+	left:23px;
+	*bottom:-16px;
+	*left:23px;
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+	padding:0;
+	zoom:1;
+}
+@media all and (-webkit-min-device-pixel-ratio:10000), 
+not all and ( -webkit-min-device-pixel-ratio : 0 ) { 
+  #zipform #path + label { bottom:-20px; }
+}
+
+#watermark_wrapper {
+	font-size: 12px;
+	font-family: Verdana,Arial,sans-serif;
+	background:#CCCCCC;
+	width: 1198px;
+	color: #555555;
+	vertical-align: middle;
+	height: 30px;
+	line-height: 20px;
+	margin-top: -27px;
+	padding: 5px 3px 3px 9px;
+}
+
+#watermark_wrapper > input {
+	vertical-align: middle;
+        margin: 0 30px 0 10px;
+}
+
+#quick_csv_encoding {
+	float: right;
+}
+#csv_encoding span {
+	margin-right: 10px;
+}
+#csv-file {
+	margin-top: 7px;
+}

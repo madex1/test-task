@@ -1,0 +1,79 @@
+#receipt {
+	font-size: 13px;
+}
+
+.table * {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+.u {
+	text-decoration: underline;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.table {
+	border-collapse: collapse;
+	empty-cells: show;
+	font-family: Arial;
+}
+
+.table, .table table, .table tr, .table td {
+	border-spacing: 0;
+	padding: 0;
+}
+
+.table td {
+	font-size: 12px;
+	padding-left: 4px;
+}
+
+.table .top {
+	vertical-align: top;
+}
+
+.table .border {
+	border: 1px solid #000;
+}
+
+.table .underline {
+	border-bottom: 1px solid #000;
+}
+
+.table .center {
+	text-align: center;
+}
+
+.table .right {
+	text-align: right;
+}
+
+.table .margin {
+	margin-top: 4px;
+}
+
+.table .small {
+	font-size: 9px;
+}
+
+.table .strong {
+	font-weight: bold;
+}
+
+.table .width_50 {
+	width: 50mm;
+}
+
+.table .width_122 {
+	width: 122mm;
+}
+
+.table .wrap {
+	white-space: nowrap;
+}
+
+.table span {
+	font-size: 12px;
+}

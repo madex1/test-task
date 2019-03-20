@@ -1,0 +1,2 @@
+<?php
+ namespace UmiCms\System\Response\UpdateTime;interface iCalculator {public function __construct(\iUmiHierarchy $vf8aea31a0fd948447674cb859137e6e7, \iUmiObjectsCollection $vfa5a883455df69e98c0f154ad0e5d47b);public function calculate();}

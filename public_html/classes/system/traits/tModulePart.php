@@ -1,0 +1,2 @@
+<?php
+ trait tModulePart {private $v22884db148f0ffb0d830ba431102b0b5;public function setModule(def_module $v22884db148f0ffb0d830ba431102b0b5) {$this->module = $v22884db148f0ffb0d830ba431102b0b5;return $this;}public function getModule() {if (!$this->module instanceof def_module) {throw new RequiredPropertyHasNoValueException('You should set module first');}return $this->module;}public function getModuleName() {return get_class($this->getModule());}}
