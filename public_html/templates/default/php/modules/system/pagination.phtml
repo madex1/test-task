@@ -1,0 +1,14 @@
+<?
+	$pagination = $this->macros('system','numpages',array($variables['total'],$variables['per_page']));
+    if(is_array($pagination)):
+?>
+<nav>
+  <ul class="pagination">
+  	<?foreach ($pagination['pages'] as $item):?>
+  	    <li <?=($item['is-active'])?'class="active"':'';?>><a href="<?=$item['link'];?>"><?=$item['num'];?></a></li>
+  	<?endforeach;?>
+  </ul>
+</nav>
+<?
+endif;
+?>

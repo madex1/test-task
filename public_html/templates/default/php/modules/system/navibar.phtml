@@ -1,0 +1,9 @@
+<?php 
+$navibar = $this->macros('core','navibar'); 
+?>
+<ul class="page-breadcrumb">
+    <li><a href="/">Главная</a></li>
+    <?foreach($navibar['items'] as $item):?>
+    <li><a href="<?=$item['link'];?>"><?=$item['text'];?></a></li>
+    <?endforeach;?>
+</ul>
