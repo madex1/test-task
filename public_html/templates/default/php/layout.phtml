@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Umilabs Test Task</title>
+
+    <!-- Styles -->
+    <link href="/templates/default/assets/css/page.min.css" rel="stylesheet">
+    <link href="/templates/default/assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/templates/default/assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/templates/default/assets/img/favicon.png">
+  </head>
+
+
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark" data-navbar="sticky">
+      <div class="container">
+
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="../index.html">
+            <img class="logo-dark" src="http://umilabs.ru/templates/umilabs20/assets/img/logo-1.png" alt="logo">
+            <img class="logo-light" src="http://umilabs.ru/templates/umilabs20/assets/img/logo-1-light.png" alt="logo">
+          </a>
+        </div>
+
+      </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+    <header class="header text-center text-white" style="background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+
+            <h1><?=$variables['header'];?></h1>
+            <p class="lead-2 opacity-90 mt-6">Let's check, how fast you learn new cms</p>
+
+          </div>
+        </div>
+
+      </div>
+    </header><!-- /.header -->
+
+    <?=$this->render($variables, 'modules/'.$variables['module'].'/'.$variables['method']);?>
+
+    <!-- Scripts -->
+    <script src="/templates/default/assets/js/page.min.js"></script>
+    <script src="/templates/default/assets/js/script.js"></script>
+
+  </body>
+  </html>
