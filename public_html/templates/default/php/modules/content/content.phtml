@@ -2,7 +2,7 @@
 $page = $variables['page'];
 
 if($page->getIsDefault()) {
-	echo $this->render($variables, 'modules/content/content-main');
+	echo $this->render($variables, 'modules/content/main');
 }elseif(file_exists('./templates/default/php/modules/content/content-'.$page->getObjectTypeId().'.phtml')) {
 	echo $this->render($variables, 'modules/content/content-'.$page->getObjectTypeId());
 }else{
