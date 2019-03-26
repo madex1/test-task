@@ -1,0 +1,19 @@
+<?php
+
+$hierarchy = umiHierarchy::getInstance();
+foreach($variables["lines"] as $item) {
+   $element = $hierarchy->getElement($item['id']);
+   if($element->getValue("author") == $this->getCommonVar('authorMain')) {
+	   if ($element->id != $this->getCommonVar('articleId')) {
+?>
+<div class="col-md-6 col-lg-4">
+          <div class="card d-block border hover-shadow-6 mb-6">
+            <a href="#"><img class="card-img-top" src="<?= $element->getValue("anons_pic")?>" alt="Card image cap"></a>
+            <div class="p-6 text-center">
+              <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#"><?= $element->getValue('publish_time') ?></a></p>
+              <h5 class="mb-0"><a class="text-dark" href="<?= $item['link'] ?>"><?= $element->getValue('h1') ?></a></h5>
+            </div>
+          </div>
+        </div>
+<?}}}
+?>
