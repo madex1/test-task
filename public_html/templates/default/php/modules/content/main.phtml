@@ -1,0 +1,48 @@
+<section class="section bg-gray p-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-xl-9 mx-auto">
+		<?=$this->render($this->macros('news', 'lastlist', array('blog', null, 5, false)), 'modules/news/block'); ?>
+
+        <nav class="flexbox my-8">
+          <a class="btn btn-white disabled"><i class="ti-arrow-left fs-9 mr-2"></i> Newer</a>
+          <a class="btn btn-white" href="#">Older <i class="ti-arrow-right fs-9 ml-2"></i></a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div class="section bg-gray">
+        <div class="container">
+
+
+          <div class="row">
+
+            <div class="col-lg-8 mx-auto">
+            	<h2>Feedback</h2>
+              <form action="#" method="POST">
+
+                <div class="row">
+                  <div class="form-group col-12 col-md-6">
+                    <input class="form-control" type="text" placeholder="Name">
+                  </div>
+
+                  <div class="form-group col-12 col-md-6">
+                    <input class="form-control" type="text" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <textarea class="form-control" placeholder="Comment" rows="4"></textarea>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="submit">Submit your comment</button>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
