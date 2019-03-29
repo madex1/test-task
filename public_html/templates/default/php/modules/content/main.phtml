@@ -1,0 +1,220 @@
+<?
+
+if (isset($_POST['btn_submit'])) {
+  $errors = array();
+
+  if($_POST['email'] == "") {
+    $errors[] = "Не заполнен адрес почты";
+  }
+
+  if($_POST['name'] == "") {
+    $errors[] = "Не заполнено имя";
+  }
+
+  if($_POST['coments'] == "") {
+    $errors[] = "Не заполнен текст в письме";
+  }
+
+  if (empty($errors)) {
+    $mail = new umiMail;
+    //Выставляем получателей письма
+    $mail->addRecipient($_POST['email'], "Dear Mr. " . $_POST['name']);
+    
+    //Указываем, от чьего имени придет письмо
+    $mail->setFrom("noreply@umi-cms.ru", "umisoft world wide empire");
+    
+    //Устанавливаем заголовок письма
+    $mail->setSubject("Проверка отправки письма из test-task");
+    
+    //Укажем, что это очень важное письмо
+    $mail->setPriorityLevel('highest');
+    
+    //Устанавливаем содержание письма
+    $mail->setContent($_POST['coments']);
+    
+    //Подтверждаем отправку письма
+    $mail->commit();
+    
+    //Отправляем письмо. Если не выполнить send(), то письмо все равно отправится. Но где-то во время завершения работы скрипта.
+    if (!$mail->send()) {
+      $errors[] = "Ошибка во время отправки письма";  
+    }
+  }
+}
+
+?>
+
+<section class="section bg-gray p-0">
+  <?
+    $ini_system = system_buildin_load('system');
+
+    $news = new selector('pages');
+    $news->limit(0, 5);
+    $news->types('hierarchy-type')->name('news', 'item');
+    $result = $news->result();
+  ?>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-xl-9 mx-auto">
+
+      <? foreach($result as $new) { ?>
+        <? 
+          // получим адрес новости
+          $umiLinksHelper = umiLinksHelper::getInstance();
+          $pageLink = $umiLinksHelper->getLink($new);
+        ?>
+        <div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <? $thumb = $ini_system->makeThumbnailFull($new->anons_pic->getFilePath(), 285, 268, 'default', '0', '1', '5'); ?>
+              <a href="<?=$new->link; ?>"><img class="fit-cover position-absolute" src="<?=$thumb['filepath']; ?>" alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4><?=$new->h1; ?></h4>
+                <p><?=$new->anons; ?></p>
+                <a class="small ls-1" href="<?=$new->link; ?>">Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <? } ?>
+    
+        <!--
+        <div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="blog-single.html"><img class="fit-cover position-absolute h-100" src="/templates/default/assets/img/thumb/2.jpg" alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4>Top 5 brilliant content marketing strategies</h4>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+                <a class="small ls-1" href="blog-single.html">Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="blog-single.html"><img class="fit-cover position-absolute h-100" src="/templates/default/assets/img/thumb/3.jpg" alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4>Best practices for minimalist design with example</h4>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+                <a class="small ls-1" href="blog-single.html">Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="blog-single.html"><img class="fit-cover position-absolute h-100" src="/templates/default/assets/img/thumb/4.jpg" alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4>Congratulate and thank to Maryam for joining our team</h4>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+                <a class="small ls-1" href="blog-single.html">Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="blog-single.html"><img class="fit-cover position-absolute h-100" src="/templates/default/assets/img/thumb/5.jpg" alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4>New published books to read by a product designer</h4>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+                <a class="small ls-1" href="blog-single.html">Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="blog-single.html"><img class="fit-cover position-absolute h-100" src="/templates/default/assets/img/thumb/6.jpg" alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4>This is why it's time to ditch dress codes at work</h4>
+                <p>Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title.</p>
+                <a class="small ls-1" href="blog-single.html">Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        -->
+
+
+
+        <nav class="flexbox my-8">
+          <a class="btn btn-white disabled"><i class="ti-arrow-left fs-9 mr-2"></i> Newer</a>
+          <a class="btn btn-white" href="#">Older <i class="ti-arrow-right fs-9 ml-2"></i></a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div class="section bg-gray">
+        <div class="container">
+
+
+          <div class="row">
+
+            <div class="col-lg-8 mx-auto">
+            	<h2>Feedback</h2>
+
+              <form action="/" method="POST">
+
+                <div class="row">
+                  <div class="form-group col-12 col-md-6">
+                    <input class="form-control" type="text" name="name" placeholder="Name" required>
+                  </div>
+
+                  <div class="form-group col-12 col-md-6">
+                    <input class="form-control" type="text" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <textarea class="form-control" name="coments" placeholder="Comment" rows="4" required></textarea>
+                </div>
+
+                <button class="btn btn-primary btn-block" name="btn_submit" value="send" type="submit">Submit your comment</button>
+                <?
+                  foreach ($errors as $error) {
+                    echo '<span style="color: red">' . $error . '</span><br>'; 
+                  }
+                ?>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
