@@ -168,7 +168,7 @@
 			if ($this->isMobile() && is_dir($this->templatesDirectory . $mobileSuffix)) {
 				$suffix = $mobileSuffix;
 			}
-
+			echo $template;
 			return $this->applyTemplate($variables, $this->templatesDirectory . $suffix . $template . '.phtml');
 		}
 

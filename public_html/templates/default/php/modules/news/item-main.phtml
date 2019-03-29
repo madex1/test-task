@@ -12,6 +12,53 @@
     </div>
   </div>
 
+  <? 
+
+  /**
+   * Получает страницу по объекту
+   * @param int id объекта
+   * @return umiHierarchyElement 
+   */
+  function getElement($object_id) {
+    $hierarchy = umiHierarchy::getInstance();
+    $element_id = current( $hierarchy->getObjectInstances($object_id) );
+    $element = $hierarchy->getElement($element_id);
+    return $element;
+  }
+
+  // получим id текущего автора
+  $parent = $variables['page']->getObject();
+  $curentAuthor = $parent->author;
+
+  // получим все новости
+  $news = new selector('objects');
+  $news->types('object-type')->name('news', 'item');
+  $result = $news->result();
+  
+  $recentPage = array();
+
+  $count = 0;
+
+  // получим новости только от текущего автора
+  foreach($result as $new) {
+    if ($new->author == $curentAuthor) {
+      // интересуют только три новости (по тз)
+      if ($count >= 3) {
+        break;
+      }
+      $newsPage = getElement($new->id);
+      $recentPage[] = array(
+        'link' => $newsPage->link,
+        //'publish_date' => $new->publish_time,
+        'publish_date' => new DateTime($new->publish_time->getFormattedDate()),
+        'anons_pic' => $new->anons_pic->getFilePath(),
+        'h1' => $new->h1,
+      );
+      $count++;
+    }
+  }
+
+  ?>
 
   <section class="section bg-gray">
     <div class="container">
@@ -19,7 +66,21 @@
 
       <div class="row gap-y">
 
-        <div class="col-md-6 col-lg-4">
+        <? foreach ($recentPage as $new) { ?>
+          
+          <div class="col-md-6 col-lg-4">
+            <div class="card d-block border hover-shadow-6 mb-6">
+              <a href="<?=$new['link']; ?>"><img class="card-img-top" src="../.<?=$new['anons_pic']; ?>" alt="Card image cap"></a>
+              <div class="p-6 text-center">
+                <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#"><?=$new['publish_date']->format('d.m.Y'); ?></a></p>
+                <h5 class="mb-0"><a class="text-dark" href="#"><?=$new['h1']; ?></a></h5>
+              </div>
+            </div>
+          </div>  
+
+        <? } ?>
+        
+        <!-- <div class="col-md-6 col-lg-4">
           <div class="card d-block border hover-shadow-6 mb-6">
             <a href="#"><img class="card-img-top" src="/templates/default/assets/img/thumb/1.jpg" alt="Card image cap"></a>
             <div class="p-6 text-center">
@@ -49,7 +110,7 @@
               <h5 class="mb-0"><a class="text-dark" href="#">Best practices for minimalist design with example</a></h5>
             </div>
           </div>
-        </div>
+        </div> -->
 
     </div>
   </div>
