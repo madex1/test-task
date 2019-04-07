@@ -1,0 +1,13 @@
+<section class="section bg-gray p-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-xl-9 mx-auto">
+                <?php
+                foreach ($variables['items'] as $item) {
+                    echo $this->render($item, 'modules/news/item-on-root');
+                }
+                ?>
+            </div>
+        </div>
+    </div>
+</section>

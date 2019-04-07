@@ -1,0 +1,22 @@
+<?php
+//Получить новость
+$item = $this->getPageById($variables);
+//Если у новости есть картинка анонса - сделать кроп
+if ($img = $item->anons_pic) {
+    $thumb = $this->macros('system', 'makeThumbnailFull', array('path' => $img->getFilePath(), 'width' => 285, 'height' => 268, 'crop' => 1, 'cropside' => 9));
+}
+?>
+
+<div class="col-md-6 col-lg-4">
+    <div class="card d-block border hover-shadow-6 mb-6">
+        <?= (empty($item->anons_pic)) ? '' :
+            '<a href="' . $item->link . '">
+                <img class="card-img-top" src="/' . $thumb['filepath'] . '" alt="' . $thumb['img_alt'] . '">
+                </a>' ?>
+        <div class="p-6 text-center">
+            <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400"
+                  href="<?= $item->link ?>"><?= date("d.m.Y", $item->publish_time->timestamp) ?></a></p
+            <h5 class="mb-0"><a class="text-dark" href="<?= $item->link ?>"><?= $item->name ?></a></h5>
+        </div>
+    </div>
+</div>
