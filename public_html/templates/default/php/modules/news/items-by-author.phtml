@@ -1,0 +1,34 @@
+<section class="section bg-gray">
+    <div class="container">
+        <h2>Recent posts</h2>
+        <div class="row gap-y">
+            <?php
+            //Селектор страниц
+            $selector = new selector('pages');
+            //Установить тип - новости
+            $selector->types('hierarchy-type')->name('news', 'item');
+            //Выбор по автору
+            $selector->where('author')->equals($variables);
+            //Инициализировать массив
+            $news = [];
+            //Получить идентификатор текущей страницы
+            $current_page_id = cmsController::getInstance()->getCurrentElementId();
+            //Подготовка конечного массива
+            foreach($selector as $page) {
+                //Если идентификатор страницы не равен идентификатору текущей страницы - добавить в массив
+                if ($current_page_id != $page->id) {
+                    $news[] = $page->id;
+                }
+            }
+            //Перемешать массив (рандом)
+            shuffle($news);
+            //Обрезать массив до трех новостей
+            $news = array_slice($news, 0, 3);
+            //Вывод каждой по шаблону
+            foreach($news as $item) {
+                echo $this->render($item, 'modules/news/item-by-author');
+            }
+            ?>
+        </div>
+    </div>
+</section>
