@@ -9,4 +9,5 @@ desktop.ini
 *.txt
 .DS_Store
 ._*
+.idea
 /public_html/sys-temp/runtime-cache/*
