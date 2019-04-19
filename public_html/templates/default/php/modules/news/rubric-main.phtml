@@ -1,1 +1,72 @@
-is it main?
+<section class="section bg-gray p-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-xl-9 mx-auto">
+<?php 
+
+ include "standalone.php";
+
+ $hierarchyTypes = umiHierarchyTypesCollection::getInstance();
+ $hierarchyType = $hierarchyTypes->getTypeByName("news");
+ $hierarchyTypeId = $hierarchyType->getId();
+ 
+ $hierarchy = umiHierarchy::getInstance();
+  
+ $currentPage = getRequest('p');
+
+ $sel = new umiSelection;
+ $sel->addElementType($hierarchyTypeId); 
+ $sel->addLimit(5, $currentPage);
+ $sel->addPermissions(); 
+ 
+ $result = umiSelectionsParser::runSelection($sel); 
+ $total = umiSelectionsParser::runSelectionCounts($sel); 
+ 
+ ?>
+
+ <?php foreach($result as $item): ?>
+  
+ <?php 
+
+  $element = $hierarchy->getElement($item);
+
+  $variables['src'] = $element->getValue("anons_pic");
+
+  $variables['width'] = 285;
+
+  $variables['height'] = 268;
+
+  $image = $this->macros('system', 'makeThumbnailFull', array('path' => '.' . $variables['src'], 'width' => $variables['width'], 'height' => $variables['height']));
+     
+  $path = $hierarchy->getPathById($element->getId());
+
+   ?> 
+
+ 
+
+<div class="card hover-shadow-7 my-8">
+          <div class="row">
+            <div class="col-md-4">
+              <a href=''><img class="fit-cover position-absolute h-100" src='<?php echo $image['src'];?>' alt="..."></a>
+            </div>
+
+            <div class="col-md-8">
+              <div class="p-7">
+                <h4><?php echo $element->getValue("h1");?></h4>
+                <p><?php echo $element->getValue("anons");?></p>
+                <a class="small ls-1" href='<?php echo $path;?>'>Read More <span class="pl-1">&xrarr;</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<?php endforeach; ?>
+
+<?php echo $this->render(array('total'=> $total, 'per_page'=>5), 'modules/system/pagination');?>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<?php echo $this->render('', 'modules/system/webforms');?>

@@ -12,44 +12,63 @@
     </div>
   </div>
 
+<?php
+
+ $hierarchy = umiHierarchy::getInstance();
+ $page = $hierarchy->getElement($variables['pageId']); 
+ $FieldAuthorId = $page->getValue('author');
+
+ $typesCollection = umiObjectTypesCollection::getInstance();
+ $typeId = $typesCollection->getBaseType('author');
+ $objectsCollection = umiObjectsCollection::getInstance();
+ $users = $objectsCollection->getGuidedItems($typeId);
+ $AuthorName = $users[$FieldAuthorId];
+
+ $hierarchyTypes = umiHierarchyTypesCollection::getInstance();
+ $hierarchyType = $hierarchyTypes->getTypeByName("news","item");
+ $hierarchyTypeId = $hierarchyType->getId();
+ 
+ $sel = new umiSelection;
+ $sel->addElementType($hierarchyTypeId); 
+ $sel->setOrderByRand(); 
+ $sel->addLimit(3, 0);
+ $sel->addPropertyFilterEqual($FieldAuthorId, $AuthorName, true);
+ $sel->addPermissions(); 
+ 
+ $result = umiSelectionsParser::runSelection($sel); 
+    
+?>
 
   <section class="section bg-gray">
     <div class="container">
       <h2>Recent posts</h2>
 
-      <div class="row gap-y">
+       <div class="row gap-y">
 
+<?php foreach($result as $item): ?>
+  
+ <?php 
+
+  $element = $hierarchy->getElement($item);
+
+  $NewDate = $this->macros('system', 'convertDate', array('','Y-m-d', $element->getValue("publish_time")));
+
+  $path = $hierarchy->getPathById($element->getId()); 
+
+ ?> 
+ 
         <div class="col-md-6 col-lg-4">
           <div class="card d-block border hover-shadow-6 mb-6">
-            <a href="#"><img class="card-img-top" src="/templates/default/assets/img/thumb/1.jpg" alt="Card image cap"></a>
+            <a href="#"><img class="card-img-top" src="<?php echo $element->getValue("anons_pic");?>" alt="Card image cap"></a>
             <div class="p-6 text-center">
-              <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">25.05.2015</a></p>
-              <h5 class="mb-0"><a class="text-dark" href="#">We relocated our office to a new designed garage</a></h5>
+              <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#"><?php echo $NewDate;?></a></p>
+              <h5 class="mb-0"><a class="text-dark" href='<?php echo "http://",$variables['domain'],$path;?>'><?php echo $element->getValue("h1");?></a></h5>
             </div>
           </div>
         </div>
 
+  <?php endforeach; ?>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="card d-block border hover-shadow-6 mb-6">
-            <a href="#"><img class="card-img-top" src="/templates/default/assets/img/thumb/2.jpg" alt="Card image cap"></a>
-            <div class="p-6 text-center">
-              <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">25.05.2015</a></p>
-              <h5 class="mb-0"><a class="text-dark" href="#">Top 5 brilliant content marketing strategies</a></h5>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4">
-          <div class="card d-block border hover-shadow-6 mb-6">
-            <a href="#"><img class="card-img-top" src="/templates/default/assets/img/thumb/3.jpg" alt="Card image cap"></a>
-            <div class="p-6 text-center">
-              <p><a class="small-5 text-lighter text-uppercase ls-2 fw-400" href="#">25.05.2015</a></p>
-              <h5 class="mb-0"><a class="text-dark" href="#">Best practices for minimalist design with example</a></h5>
-            </div>
-          </div>
-        </div>
 
     </div>
   </div>

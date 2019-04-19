@@ -1,0 +1,121 @@
+      <div class="section bg-gray">
+        <div class="container">
+
+
+          <div class="row">
+              
+            <div class="col-lg-8 mx-auto">
+              <h2>Feedback</h2>
+                    
+              <form id="FeedBack">
+
+                <div class="row">
+                  <div class="form-group col-12 col-md-6">
+                    <input id="Name" name="Name" class="form-control" type="text" placeholder="Name">
+                  </div>
+
+                  <div class="form-group col-12 col-md-6">
+                    <input id="Email" name="Email" class="form-control" type="email" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <textarea id="Comment" name="Comment" class="form-control" type="text" placeholder="Comment" rows="4"></textarea >
+                </div>
+
+                <input id="Send" class="btn btn-primary btn-block" type="button" value="Submit your comment">
+              </form>
+
+              <div id="result"></div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+
+function CheckRequired() {
+    
+var data = $('#FeedBack').serializeArray();
+
+var chek = 0;
+
+$.each(data,function(){
+  
+  if(this.value==''){
+
+    chek++;
+
+  }
+
+});
+
+if(chek!=0){
+
+    return false;
+
+}else{
+
+    return true;
+
+}
+                          
+                          }
+
+               
+
+$(document).ready(function(){
+
+     $("#Send").click(function(){
+      
+      
+      if(CheckRequired()){
+
+      var data = $( "#FeedBack" ).serialize();
+      var url= '/udata/custom/sendback/add.json';
+ 
+      $.ajax({
+            url: url,
+            data: data,
+            success: function(response){
+            
+            var data_array = $.parseJSON(response);
+
+           
+            if(data_array['result'].toLowerCase()=='ok'){
+                  
+                  $("#result").html('<h1 style="color:lime; text-align:center;">Your message sends!!!</h1>');
+
+            }else{
+
+
+                  $("#result").html('<h1 style="color:red; text-align:center;">'+data_array['result']+'</h1>');
+            }
+
+            
+                                
+                                }
+            });
+
+
+
+      }else{
+
+         
+                alert('Please check values all fields');
+
+     }
+
+
+     
+
+
+
+      });
+     
+});
+</script>
